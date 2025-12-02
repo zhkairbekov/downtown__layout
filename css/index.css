@@ -623,3 +623,49 @@ footer .developers a:hover {
         font-size: 38px;
     }
 }
+
+
+/* 
+ ---------------------------------
+ ----- Слайдер с партнерами ------
+ ---------------------------------
+ */
+
+.partners-carousel {
+    padding-top   : 160px;
+    padding-bottom: 160px;
+    margin-bottom : 120px;
+}
+
+.partners-carousel {
+    padding-top   : 160px;
+    padding-bottom: 160px;
+}
+
+.partners-carousel__left-side p {
+    max-width    : 250px;
+    margin-bottom: rgb(253, 213, 213);
+    font-family  : Montserrat;
+    font-weight  : 400;
+    font-size    : 16px;
+    line-height  : 24px;
+    color        : #383838;
+}
+
+.partners-carousel__right-side p {
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size  : 24px;
+    line-height: 30px;
+    color      : #383838;
+    margin     : 0;
+}
+
+.partners-carousel__slider {
+    margin-top: 60px;
+}
+
+.partners-carousel__slider .owl-stage {
+    display    : flex;
+    align-items: center;
+}

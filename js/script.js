@@ -1,4 +1,4 @@
-(function() {
+(function () {
     const burgerBtn = document.getElementById('burgerBtn');
     const mobileMenu = document.getElementById('mobileMenu');
     const closeBtn = document.getElementById('mobileMenuClose');
@@ -40,7 +40,7 @@
         burgerBtn.focus();
     }
 
-    burgerBtn.addEventListener('click', function(e) {
+    burgerBtn.addEventListener('click', function (e) {
         e.preventDefault();
         if (burgerBtn.classList.contains('active')) {
             closeMenu();
@@ -50,7 +50,7 @@
     });
 
     if (closeBtn) {
-        closeBtn.addEventListener('click', function(e) {
+        closeBtn.addEventListener('click', function (e) {
             e.preventDefault();
             closeMenu();
         });
@@ -62,14 +62,41 @@
         });
     });
 
-    document.addEventListener('keydown', function(e) {
+    document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
             closeMenu();
         }
     });
 
-    mobileMenu.addEventListener('click', function(e) {
+    mobileMenu.addEventListener('click', function (e) {
         if (e.target === mobileMenu) closeMenu();
     });
 
 })();
+
+$('.partners-carousel__slider').owlCarousel({
+    items: 6,
+    margin: 121,
+    loop: true,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    autoplaySpeed: 800,
+    dots: false,
+    nav: false,
+    mouseDrag: true,
+    touchDrag: true,
+    responsive: {
+        0: {
+            items: 2,
+        },
+        500: {
+            items: 3,
+        },
+        768: {
+            items: 4,
+        },
+        991: {
+            items: 6,
+        },
+    },
+});
