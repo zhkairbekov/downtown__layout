@@ -6,6 +6,7 @@
     const header = document.querySelector('header');
     const header_wrapper = document.querySelector('.header');
     const body = document.body;
+    const logoImg = document.querySelector('.header__logo img'); // логотип
 
     if (!burgerBtn || !mobileMenu) return;
 
@@ -17,7 +18,11 @@
         burgerBtn.setAttribute('aria-expanded', 'true');
         burgerBtn.classList.add('active');
         body.classList.add('no-scroll');
-        closeBtn.focus();
+
+        // Меняем логотип
+        if (logoImg) logoImg.src = 'img/logo-colour.png';
+
+        if (closeBtn) closeBtn.focus();
     }
 
     function closeMenu() {
@@ -28,6 +33,10 @@
         burgerBtn.setAttribute('aria-expanded', 'false');
         burgerBtn.classList.remove('active');
         body.classList.remove('no-scroll');
+
+        // Возвращаем логотип обратно
+        if (logoImg) logoImg.src = 'img/logo-light.png';
+
         burgerBtn.focus();
     }
 
@@ -40,10 +49,12 @@
         }
     });
 
-    closeBtn.addEventListener('click', function(e) {
-        e.preventDefault();
-        closeMenu();
-    });
+    if (closeBtn) {
+        closeBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            closeMenu();
+        });
+    }
 
     menuLinks.forEach(link => {
         link.addEventListener('click', () => {
