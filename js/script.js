@@ -13,13 +13,19 @@ $('.partners-carousel__slider').owlCarousel({
     touchDrag: true,
     responsive: {
         0: {
-            items: 2,
+            items: 1,
         },
-        500: {
+        350: {
+            items: 2,
+            margin: 24,
+        },
+        600: {
             items: 3,
+            margin: 24,
         },
         768: {
             items: 4,
+            margin: 40,
         },
         991: {
             items: 6,

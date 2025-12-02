@@ -132,6 +132,25 @@
 
 .start-window__additional .additional__item:last-child a {
     text-decoration: none;
+    transition     : color 0.3s ease;
+}
+
+.start-window__additional .additional__item:last-child a circle,
+.start-window__additional .additional__item:last-child a path {
+    transition: fill 0.3s ease;
+}
+
+.start-window__additional .additional__item:last-child a:hover {
+    text-decoration: none;
+    color          : #C25D49;
+}
+
+.start-window__additional .additional__item:last-child a:hover circle {
+    fill: #ffffff;
+}
+
+.start-window__additional .additional__item:last-child a:hover path {
+    fill: #C25D49;
 }
 
 @media (max-width: 992px) {
@@ -179,8 +198,8 @@
 }
 
 .partners-carousel__left-side p {
-    max-width    : 250px;
-    margin-bottom: rgb(253, 213, 213);
+    max-width    : 270px;
+    margin-bottom: 0;
     font-family  : Montserrat;
     font-weight  : 400;
     font-size    : 16px;
@@ -204,4 +223,10 @@
 .partners-carousel__slider .owl-stage {
     display    : flex;
     align-items: center;
+}
+
+@media (max-width: 992px) {
+    .partners-carousel__left-side {
+        margin-bottom: 24px;
+    }
 }
