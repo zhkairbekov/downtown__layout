@@ -1,474 +1,464 @@
-    /* 
+/* 
  ---------------------------------
  -------- Главная страница -------
  ---------------------------------
  */
 
-    .start-window {
-        background     : url('../img/1.png') no-repeat center center;
-        background-size: cover;
-        color          : #F3F0EE;
-        text-align     : center;
-    }
+.start-window {
+    background     : url('../img/1.png') no-repeat center center;
+    background-size: cover;
+    color          : #F3F0EE;
+    text-align     : center;
+}
 
-    .start-window .black {
-        background: #00000066;
-        width     : 100%;
-        height    : 100%;
-    }
+.start-window .black {
+    background: #00000066;
+    width     : 100%;
+    height    : 100%;
+}
 
+.start-window__content {
+    min-height     : 775px;
+    display        : flex;
+    align-items    : center;
+    position       : relative;
+    justify-content: center;
+}
+
+.start-window__content h1 {
+    font-family   : Montserrat;
+    font-weight   : 400;
+    font-size     : 64px;
+    line-height   : 68px;
+    text-align    : center;
+    vertical-align: bottom;
+    margin-bottom : 0;
+}
+
+.start-window__content h1 span {
+    font-weight: 600;
+}
+
+.start-window__buttons {
+    margin-top     : 50px;
+    display        : flex;
+    justify-content: center;
+    gap            : 20px;
+    flex-wrap      : wrap;
+}
+
+.start-window__buttons a {
+    font-family     : Montserrat;
+    font-weight     : 600;
+    font-size       : 18px;
+    line-height     : 18px;
+    color           : #fff;
+    text-decoration : none;
+    background-color: #C25D49;
+    padding         : 14px 32px;
+    border-radius   : 40px;
+    transition      : background-color 0.3s ease, color 0.3s ease;
+}
+
+.start-window__buttons a:hover {
+    background-color: #fff;
+    color           : #C25D49;
+}
+
+.start-window__left-side {
+    position        : absolute;
+    left            : 0;
+    bottom          : 10%;
+    transform       : rotate(-90deg) translateY(-50%);
+    transform-origin: left top;
+    margin-left     : 20px;
+}
+
+.start-window__left-side .left-side__content {
+    display    : flex;
+    align-items: center;
+    gap        : 48px;
+}
+
+.start-window__left-side .left-side__content p {
+    margin: 0;
+}
+
+.start-window__left-side .left-side__content hr {
+    width : 150px;
+    margin: 0;
+}
+
+.start-window__left-side__socials {
+    display: flex;
+    gap    : 28px;
+}
+
+.start-window__additional {
+    position       : absolute;
+    bottom         : 80px;
+    right          : 0;
+    display        : flex;
+    flex-wrap      : wrap;
+    gap            : 100px;
+    width          : 100%;
+    justify-content: space-between;
+    padding-left   : 100px;
+    align-items    : center;
+}
+
+.start-window__additional .additional__item:first-child p {
+    margin    : 0;
+    max-width : 400px;
+    text-align: start;
+}
+
+.start-window__additional .additional__item:last-child {
+    margin-top: 38px;
+}
+
+.start-window__additional .additional__item:last-child a {
+    display        : flex;
+    align-items    : center;
+    gap            : 18px;
+    margin         : 0;
+    font-family    : Montserrat;
+    font-weight    : 400;
+    font-size      : 18px;
+    line-height    : 24px;
+    color          : #fff;
+    text-decoration: none;
+}
+
+.start-window__additional .additional__item:last-child a {
+    text-decoration: none;
+}
+
+.start-window__additional .additional__item:last-child a circle,
+.start-window__additional .additional__item:last-child a path {
+    transition: fill 0.3s ease;
+}
+
+.start-window__additional .additional__item:last-child a:hover {
+    text-decoration: none;
+}
+
+.start-window__additional .additional__item:last-child a:hover circle {
+    fill: #ffffff;
+}
+
+.start-window__additional .additional__item:last-child a:hover path {
+    fill: #C25D49;
+}
+
+@media (max-width: 992px) {
     .start-window__content {
-        min-height     : 775px;
-        display        : flex;
-        align-items    : center;
-        position       : relative;
-        justify-content: center;
-    }
-
-    .start-window__content h1 {
-        font-family   : Montserrat;
-        font-weight   : 400;
-        font-size     : 64px;
-        line-height   : 68px;
-        text-align    : center;
-        vertical-align: bottom;
-        margin-bottom : 0;
-    }
-
-    .start-window__content h1 span {
-        font-weight: 600;
-    }
-
-    .start-window__buttons {
-        margin-top     : 50px;
-        display        : flex;
-        justify-content: center;
-        gap            : 20px;
-        flex-wrap      : wrap;
-    }
-
-    .start-window__buttons a {
-        font-family     : Montserrat;
-        font-weight     : 600;
-        font-size       : 18px;
-        line-height     : 18px;
-        color           : #fff;
-        text-decoration : none;
-        background-color: #C25D49;
-        padding         : 14px 32px;
-        border-radius   : 40px;
-        transition      : background-color 0.3s ease, color 0.3s ease;
-    }
-
-    .start-window__buttons a:hover {
-        background-color: #fff;
-        color           : #C25D49;
-    }
-
-    .start-window__left-side {
-        position        : absolute;
-        left            : 0;
-        bottom          : 10%;
-        transform       : rotate(-90deg) translateY(-50%);
-        transform-origin: left top;
-        margin-left     : 20px;
-    }
-
-    .start-window__left-side .left-side__content {
-        display    : flex;
-        align-items: center;
-        gap        : 48px;
-    }
-
-    .start-window__left-side .left-side__content p {
-        margin: 0;
-    }
-
-    .start-window__left-side .left-side__content hr {
-        width : 150px;
-        margin: 0;
-    }
-
-    .start-window__left-side__socials {
-        display: flex;
-        gap    : 28px;
+        display       : flex;
+        flex-direction: column;
     }
 
     .start-window__additional {
-        position       : absolute;
-        bottom         : 80px;
-        right          : 0;
-        display        : flex;
-        flex-wrap      : wrap;
-        gap            : 100px;
-        width          : 100%;
-        justify-content: space-between;
-        padding-left   : 100px;
-        align-items    : center;
+        position: absolute;
+        padding : 0;
+        width   : fit-content;
+        right   : 0;
     }
 
-    .start-window__additional .additional__item:first-child p {
-        margin    : 0;
-        max-width : 400px;
-        text-align: start;
+    .start-window__additional .additional__item:first-child {
+        display: none;
     }
 
-    .start-window__additional .additional__item:last-child {
-        margin-top: 38px;
+    .start-window__left-side {
+        display: none;
     }
 
-    .start-window__additional .additional__item:last-child a {
-        display        : flex;
-        align-items    : center;
-        gap            : 18px;
-        margin         : 0;
-        font-family    : Montserrat;
-        font-weight    : 400;
-        font-size      : 18px;
-        line-height    : 24px;
-        color          : #fff;
-        text-decoration: none;
+    .start-window__buttons a {
+        width: 100%;
     }
+}
 
-    .start-window__additional .additional__item:last-child a {
-        text-decoration: none;
+@media (max-width: 575px) {
+    .start-window__text h1 {
+        font-size: 48px;
     }
+}
 
-    .start-window__additional .additional__item:last-child a circle,
-    .start-window__additional .additional__item:last-child a path {
-        transition: fill 0.3s ease;
+@media (max-width: 400px) {
+    .start-window__text h1 {
+        font-size: 38px;
     }
+}
 
-    .start-window__additional .additional__item:last-child a:hover {
-        text-decoration: none;
-    }
 
-    .start-window__additional .additional__item:last-child a:hover circle {
-        fill: #ffffff;
-    }
-
-    .start-window__additional .additional__item:last-child a:hover path {
-        fill: #C25D49;
-    }
-
-    @media (max-width: 992px) {
-        .start-window__content {
-            display       : flex;
-            flex-direction: column;
-        }
-
-        .start-window__additional {
-            position: absolute;
-            padding : 0;
-            width   : fit-content;
-            right   : 0;
-        }
-
-        .start-window__additional .additional__item:first-child {
-            display: none;
-        }
-
-        .start-window__left-side {
-            display: none;
-        }
-
-        .start-window__buttons a {
-            width: 100%;
-        }
-    }
-
-    @media (max-width: 575px) {
-        .start-window__text h1 {
-            font-size: 48px;
-        }
-    }
-
-    @media (max-width: 400px) {
-        .start-window__text h1 {
-            font-size: 38px;
-        }
-    }
-
-    /* 
+/* 
  ---------------------------------
  ----- Слайдер с партнерами ------
  ---------------------------------
  */
 
-    .partners-carousel {
-        padding-top   : 160px;
-        padding-bottom: 160px;
-    }
+.partners-carousel {
+    padding-top   : 160px;
+    padding-bottom: 160px;
+}
 
-    .partners-carousel__left-side p {
-        max-width    : 270px;
-        margin-bottom: 0;
-        font-family  : Montserrat;
-        font-weight  : 400;
-        font-size    : 16px;
-        line-height  : 24px;
-        color        : #383838;
-    }
+.partners-carousel__left-side p {
+    max-width    : 270px;
+    margin-bottom: 0;
+    font-family  : Montserrat;
+    font-weight  : 400;
+    font-size    : 16px;
+    line-height  : 24px;
+    color        : #383838;
+}
 
-    .partners-carousel__right-side p {
-        font-family: Montserrat;
-        font-weight: 500;
-        font-size  : 24px;
-        line-height: 30px;
-        color      : #383838;
-        margin     : 0;
-    }
+.partners-carousel__right-side p {
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size  : 24px;
+    line-height: 30px;
+    color      : #383838;
+    margin     : 0;
+}
 
-    .partners-carousel__slider {
-        margin-top: 60px;
-    }
+.partners-carousel__slider {
+    margin-top: 60px;
+}
 
-    .partners-carousel__slider .owl-stage {
-        display    : flex;
-        align-items: center;
-    }
+.partners-carousel__slider .owl-stage {
+    display    : flex;
+    align-items: center;
+}
 
-    @media (max-width: 992px) {
-        .partners-carousel__left-side {
-            margin-bottom: 24px;
-        }
+@media (max-width: 992px) {
+    .partners-carousel__left-side {
+        margin-bottom: 24px;
     }
+}
 
-    /* 
+
+/* 
  ---------------------------------
  --------- Преимущества ----------
  ---------------------------------
  */
 
-    .advantages {
-        margin-bottom: 120px;
-    }
+.advantages {
+    margin-bottom: 120px;
+}
 
-    .advantages h3 {
-        font-family   : Montserrat;
-        font-weight   : 500;
-        font-size     : 15px;
-        line-height   : 100%;
-        text-transform: uppercase;
-        margin-bottom : 10px;
-    }
+.advantages h3 {
+    font-family   : Montserrat;
+    font-weight   : 500;
+    font-size     : 15px;
+    line-height   : 100%;
+    text-transform: uppercase;
+    margin-bottom : 10px;
+}
 
-    .advantages h2 {
-        font-family  : Montserrat;
-        font-weight  : 500;
-        font-size    : 50px;
-        line-height  : 60px;
-        margin-bottom: 0;
-    }
+.advantages h2 {
+    font-family  : Montserrat;
+    font-weight  : 500;
+    font-size    : 50px;
+    line-height  : 60px;
+    margin-bottom: 0;
+}
 
-    .advantages__content {
-        margin-top: 80px;
-    }
+.advantages__content {
+    margin-top: 80px;
+}
 
+.advantages__content__left-side {
+    display        : flex;
+    flex-direction : column;
+    height         : 100%;
+    justify-content: space-between;
+    padding-bottom : 20px;
+    padding-left   : 32px;
+}
+
+.advantages__content__left-side a {
+    text-decoration : none;
+    transition      : color 0.3s ease, background-color 0.3s ease;
+    font-family     : Montserrat;
+    font-weight     : 500;
+    font-size       : 20px;
+    line-height     : 100%;
+    color           : #222222;
+    padding         : 24px;
+    border-radius   : 40px;
+    background-color: transparent;
+    display         : flex;
+    align-items     : center;
+    gap             : 12px;
+}
+
+.advantages__content__left-side a:hover {
+    color           : #ffffff;
+    background-color: #C25D49;
+}
+
+.advantages__content__left-side a.active {
+    color           : #ffffff;
+    background-color: #C25D49;
+}
+
+.advantages__content__right-side img {
+    max-width    : 100%;
+    border-radius: 20px;
+}
+
+.advantages__content__right-side span {
+    background   : linear-gradient(180.59deg, rgba(0, 0, 0, 0.5) 0.2%, rgba(0, 0, 0, 0) 37.34%);
+    position     : absolute;
+    width        : 100%;
+    height       : 100%;
+    top          : 0;
+    left         : 0;
+    border-radius: 20px;
+    z-index      : 1;
+}
+
+.advantages__content__right-side .adv-slide__text {
+    position: absolute;
+    right   : 45px;
+    top     : 50px;
+    z-index : 2;
+    display : flex;
+    gap     : 12px;
+}
+
+.advantages__content__right-side .adv-slide__text p:first-child {
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size  : 48px;
+    line-height: 100%;
+    color      : #fff;
+    margin     : 0;
+}
+
+.advantages__content__right-side .adv-slide__text p {
+    font-family  : Montserrat;
+    font-weight  : 400;
+    font-size    : 16px;
+    line-height  : 100%;
+    color        : #fff;
+    margin-bottom: 0;
+    max-width    : 320px;
+}
+
+.adv-slider {
+    position: relative;
+    overflow: hidden;
+}
+
+.adv-slide {
+    position  : absolute;
+    opacity   : 0;
+    transform : translateX(20px);
+    transition: opacity .6s ease, transform .6s ease;
+    width     : 100%;
+}
+
+.adv-slide.active {
+    opacity  : 1;
+    transform: translateX(0);
+    position : relative;
+    z-index  : 2;
+}
+
+.advantages__content__left-side a .arrow {
+    transition: transform .4s ease;
+}
+
+.advantages__content__left-side a.active .arrow,
+.advantages__content__left-side a:hover .arrow {
+    transform: translateX(16px);
+}
+
+.adv-progress {
+    position      : absolute;
+    left          : 45px;
+    bottom        : 18px;
+    display       : flex;
+    align-items   : center;
+    gap           : 18px;
+    z-index       : 3;
+    pointer-events: none;
+}
+
+.adv-progress__numbers {
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size  : 14px;
+    color      : #fff;
+    display    : flex;
+    gap        : 6px;
+    align-items: baseline;
+}
+
+.adv-progress__bar {
+    width        : 280px;
+    height       : 8px;
+    background   : rgba(255, 255, 255, 0.12);
+    border-radius: 8px;
+    overflow     : hidden;
+    box-shadow   : inset 0 0 6px rgba(0, 0, 0, 0.25);
+}
+
+.adv-progress__fill {
+    width           : 0%;
+    height          : 100%;
+    background      : linear-gradient(90deg, #F38A6A, #C25D49);
+    border-radius   : 8px;
+    transform-origin: left center;
+    transition      : width 0.1s linear;
+}
+
+.advantages__content__left-side a .arrow {
+    transition: transform .35s cubic-bezier(.22, .9, .29, 1), opacity .25s;
+}
+
+.advantages__content__left-side a.active .arrow {
+    transform: translateX(6px) rotate(0.5deg);
+    opacity  : 1;
+}
+
+@media (max-width: 992px) {
     .advantages__content__left-side {
-        display        : flex;
-        flex-direction : column;
-        height         : 100%;
-        justify-content: space-between;
-        padding-bottom : 20px;
-        padding-left   : 32px;
+        padding-left   : 0;
+        flex-wrap      : wrap;
+        flex-direction : row;
+        gap            : 16px;
+        justify-content: center;
     }
 
     .advantages__content__left-side a {
-        text-decoration : none;
-        transition      : color 0.3s ease, background-color 0.3s ease;
-        font-family     : Montserrat;
-        font-weight     : 500;
-        font-size       : 20px;
-        line-height     : 100%;
-        color           : #222222;
-        padding         : 24px;
-        border-radius   : 40px;
-        background-color: transparent;
-        display         : flex;
-        align-items     : center;
-        gap             : 12px;
-    }
-
-    .advantages__content__left-side a:hover {
-        color           : #ffffff;
-        background-color: #C25D49;
+        width  : fit-content;
+        padding: 6px 4px;
     }
 
     .advantages__content__left-side a.active {
-        color           : #ffffff;
-        background-color: #C25D49;
+        width  : fit-content;
+        padding: 6px 10px;
     }
 
-    .advantages__content__right-side img {
-        max-width    : 100%;
-        border-radius: 20px;
-    }
-
-    .advantages__content__right-side span {
-        background   : linear-gradient(180.59deg, rgba(0, 0, 0, 0.5) 0.2%, rgba(0, 0, 0, 0) 37.34%);
-        position     : absolute;
-        width        : 100%;
-        height       : 100%;
-        top          : 0;
-        left         : 0;
-        border-radius: 20px;
-        z-index      : 1;
+    .advantages__content__left-side a svg {
+        display: none;
     }
 
     .advantages__content__right-side .adv-slide__text {
-        position: absolute;
-        right   : 45px;
-        top     : 50px;
-        z-index : 2;
-        display : flex;
-        gap     : 12px;
+        top : 16px;
+        left: 10px;
     }
 
-    .advantages__content__right-side .adv-slide__text p:first-child {
-        font-family: Montserrat;
-        font-weight: 600;
-        font-size  : 48px;
-        line-height: 100%;
-        color      : #fff;
-        margin     : 0;
+    .advantages__content {
+        margin-top: 50px;
     }
+}
 
-    .advantages__content__right-side .adv-slide__text p {
-        font-family  : Montserrat;
-        font-weight  : 400;
-        font-size    : 16px;
-        line-height  : 100%;
-        color        : #fff;
-        margin-bottom: 0;
-        max-width    : 320px;
+@media (max-width: 475px) {
+    .advantages__content__right-side .adv-slide__text {
+        flex-direction: column-reverse;
+        align-items   : flex-start;
     }
-
-    .adv-slider {
-        position: relative;
-        overflow: hidden;
-    }
-
-    .adv-slide {
-        position  : absolute;
-        opacity   : 0;
-        transform : translateX(20px);
-        transition: opacity .6s ease, transform .6s ease;
-        width     : 100%;
-    }
-
-    .adv-slide.active {
-        opacity  : 1;
-        transform: translateX(0);
-        position : relative;
-        z-index  : 2;
-    }
-
-    .advantages__content__left-side a .arrow {
-        transition: transform .4s ease;
-    }
-
-    .advantages__content__left-side a.active .arrow,
-    .advantages__content__left-side a:hover .arrow {
-        transform: translateX(16px);
-    }
-
-    /* Прогресс-контейнер (расположим внизу правого блока) */
-
-    .adv-progress {
-        position      : absolute;
-        left          : 45px;
-        /* совпадает с положением текста в примере */
-        bottom        : 18px;
-        display       : flex;
-        align-items   : center;
-        gap           : 18px;
-        z-index       : 3;
-        pointer-events: none;
-        /* чтобы клики проходили на слайды; если нужно — убрать */
-    }
-
-    /* Нумерация */
-
-    .adv-progress__numbers {
-        font-family: Montserrat;
-        font-weight: 600;
-        font-size  : 14px;
-        color      : #fff;
-        display    : flex;
-        gap        : 6px;
-        align-items: baseline;
-    }
-
-    /* Бар */
-
-    .adv-progress__bar {
-        width        : 280px;
-        /* подстраивай под макет */
-        height       : 8px;
-        background   : rgba(255, 255, 255, 0.12);
-        border-radius: 8px;
-        overflow     : hidden;
-        box-shadow   : inset 0 0 6px rgba(0, 0, 0, 0.25);
-    }
-
-    .adv-progress__fill {
-        width           : 0%;
-        height          : 100%;
-        background      : linear-gradient(90deg, #F38A6A, #C25D49);
-        border-radius   : 8px;
-        transform-origin: left center;
-        transition      : width 0.1s linear;
-        /* небольшой переход для гладкости */
-    }
-
-    /* Немного улучшений для стрелки (если используешь svg.arrow) */
-
-    .advantages__content__left-side a .arrow {
-        transition: transform .35s cubic-bezier(.22, .9, .29, 1), opacity .25s;
-    }
-
-    .advantages__content__left-side a.active .arrow {
-        transform: translateX(6px) rotate(0.5deg);
-        opacity  : 1;
-    }
-
-    @media (max-width: 992px) {
-        .advantages__content__left-side {
-            padding-left   : 0;
-            flex-wrap      : wrap;
-            flex-direction : row;
-            gap            : 16px;
-            justify-content: center;
-        }
-
-        .advantages__content__left-side a {
-            width  : fit-content;
-            padding: 6px 4px;
-        }
-
-        .advantages__content__left-side a.active {
-            width  : fit-content;
-            padding: 6px 10px;
-        }
-
-        .advantages__content__left-side a svg {
-            display: none;
-        }
-
-        .advantages__content__right-side .adv-slide__text {
-            top : 16px;
-            left: 10px;
-        }
-
-        .advantages__content {
-            margin-top: 50px;
-        }
-    }
-
-    @media (max-width: 475px) {
-        .advantages__content__right-side .adv-slide__text {
-            flex-direction: column-reverse;
-            align-items   : flex-start;
-        }
-    }
+}
