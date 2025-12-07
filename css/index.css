@@ -606,3 +606,232 @@
     color        : #383838;
     margin-bottom: 0;
 }
+
+.obj__content {
+    margin-top: 70px;
+}
+
+.obj__content__left-side {
+    display        : flex;
+    flex-direction : column;
+    height         : 100%;
+    justify-content: space-between;
+    gap            : 24px;
+}
+
+.obj__content__left-side a {
+    text-decoration : none;
+    transition      : color 0.3s ease, background-color 0.3s ease;
+    font-family     : Montserrat;
+    font-weight     : 500;
+    font-size       : 20px;
+    line-height     : 100%;
+    color           : #222222;
+    padding         : 8px 12px;
+    border-radius   : 40px;
+    background-color: transparent;
+    display         : flex;
+    align-items     : center;
+    gap             : 12px;
+    text-transform  : uppercase;
+    position        : relative;
+    width           : fit-content;
+}
+
+.obj__content__left-side a:hover::after,
+.obj__content__left-side a.active::after {
+    content         : "";
+    width           : 100%;
+    height          : 2px;
+    background-color: #F38A6A;
+    position        : absolute;
+    bottom          : 0;
+    left            : 0;
+}
+
+.obj-slide .col-12 {
+    display    : flex;
+    align-items: center;
+
+    img {
+        width: 100%;
+    }
+}
+
+.obj__content .obj-button {
+    position       : absolute;
+    right          : 12px;
+    top            : 0;
+    width          : fit-content;
+    padding        : 12px 24px;
+    background     : transparent;
+    color          : #C25D49;
+    font-family    : Montserrat;
+    font-weight    : 600;
+    font-size      : 14px;
+    line-height    : 150%;
+    border-radius  : 40px;
+    border         : 2px solid #C25D49;
+    text-decoration: none;
+    transition     : background-color 0.3s ease, color 0.3s ease;
+}
+
+.obj__content .obj-button:hover {
+    background-color: #C25D49;
+    color           : #fff;
+}
+
+.obj-slide .obj-slide__text {
+    position: absolute;
+    width   : 100%;
+    bottom  : 0;
+    left    : 0;
+}
+
+.obj-slide__text__content {
+    width         : max-content;
+    margin        : 0 auto;
+    padding       : 24px 38px;
+    background    : #fff;
+    border-radius : 10px;
+    display       : flex;
+    flex-direction: column;
+    gap           : 14px;
+
+    ul {
+        margin-bottom  : 0;
+        list-style-type: none;
+        padding        : 0;
+        gap            : 14px;
+        display        : flex;
+        flex-direction : column;
+
+        li {
+            display: flex;
+            gap    : 15px;
+            width  : max-content;
+
+            img {
+                max-width: 24px;
+            }
+        }
+    }
+}
+
+.obj-slide__text__content li:nth-child(1) img {
+    width : 22px;
+    height: 22px;
+}
+
+.obj-slide__text__content li:nth-child(2) img {
+    width : 24px;
+    height: 24px;
+}
+
+.obj-slide__text__content li:nth-child(3) img {
+    width : 23px;
+    height: 23px;
+}
+
+.obj-slider__arrows {
+    display : flex;
+    gap     : 24px;
+    position: absolute;
+    right   : 0;
+    bottom  : 0;
+    width   : fit-content;
+
+    a:first-child {
+        svg {
+            transform: rotate(180deg);
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .obj__content {
+        margin-top: 50px;
+    }
+
+    .obj__left-side__free {
+        display  : flex;
+        flex-wrap: wrap;
+        gap      : 16px;
+    }
+
+    .obj__content .col-12:first-child {
+        margin-bottom: 60px;
+    }
+
+    .obj__content__right-side .obj-slide .col-12:first-child {
+        display: none;
+    }
+
+    .obj__content__right-side .obj-slide .col-12:last-child {
+        padding-bottom: 116px;
+        padding-left  : 0;
+        padding-right : 0;
+    }
+
+    .obj__content .obj-button {
+        position  : relative;
+        margin-top: 60px;
+        width     : 100%;
+    }
+
+    .obj-slider__arrows {
+        bottom: 10%;
+    }
+}
+
+
+/* Добавьте эти стили к вашему существующему CSS */
+
+.obj-slider {
+    position: relative;
+    overflow: hidden;
+}
+
+.obj-slide {
+    position      : absolute;
+    top           : 0;
+    left          : 10px;
+    width         : 100%;
+    opacity       : 0;
+    visibility    : hidden;
+    transition    : opacity 0.5s ease, visibility 0.5s ease;
+    pointer-events: none;
+}
+
+.obj-slide.active {
+    position      : relative;
+    opacity       : 1;
+    visibility    : visible;
+    pointer-events: auto;
+    left          : 10px;
+}
+
+
+/* Плавная анимация для стрелок при наведении */
+
+.obj-slider__arrows a {
+    display        : inline-flex;
+    align-items    : center;
+    justify-content: center;
+    padding        : 10px;
+    transition     : transform 0.3s ease;
+}
+
+.obj-slider__arrows a:hover,
+.obj-slider__arrows a.active {
+    transform: scale(1.8);
+}
+
+.obj-slider__arrows a svg {
+    transition: stroke 0.3s ease;
+}
+
+.obj-slider__arrows a:hover svg path,
+.obj-slider__arrows a.active svg path {
+    stroke: #C25D49;
+}

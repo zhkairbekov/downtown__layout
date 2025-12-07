@@ -133,3 +133,111 @@ document.addEventListener("DOMContentLoaded", () => {
 
     slides.forEach(s => obs.observe(s, { attributes: true }));
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const leftLinks = document.querySelectorAll(".obj__left-side__free a");
+    const confLink = document.querySelector(".obj__left-side__conf a");
+    const slides = document.querySelectorAll(".obj-slide");
+    const arrows = document.querySelectorAll(".obj-slider__arrows a");
+
+    if (!slides.length) return;
+
+    let current = 0;
+    let autoTimer = null;
+    const AUTO_DELAY = 10000;
+
+    // Функция для обновления состояния стрелок
+    function updateArrows(direction) {
+        arrows.forEach(arrow => arrow.classList.remove("active"));
+
+        if (direction === "forward") {
+            // Вторая стрелка (вперед) становится активной
+            arrows[1].classList.add("active");
+        } else if (direction === "backward") {
+            // Первая стрелка (назад) становится активной
+            arrows[0].classList.add("active");
+        }
+    }
+
+    // Функция для установки активного слайда
+    function setActive(index, userInitiated = false, direction = null) {
+        index = ((index % slides.length) + slides.length) % slides.length;
+
+        if (index === current && !userInitiated) return;
+
+        slides[current].classList.remove("active");
+        slides[index].classList.add("active");
+
+        leftLinks.forEach((link, i) => {
+            link.classList.toggle("active", i === index);
+        });
+
+        if (confLink) {
+            confLink.classList.toggle("active", index === slides.length - 1);
+        }
+
+        current = index;
+
+        // Обновляем стрелки только если указано направление
+        if (direction) {
+            updateArrows(direction);
+        }
+
+        resetAuto();
+    }
+
+    function nextSlide() {
+        setActive(current + 1, false, "forward");
+    }
+
+    function prevSlide() {
+        setActive(current - 1, false, "backward");
+    }
+
+    function resetAuto() {
+        clearInterval(autoTimer);
+        autoTimer = setInterval(nextSlide, AUTO_DELAY);
+    }
+
+    leftLinks.forEach((link, i) => {
+        link.addEventListener("click", (e) => {
+            e.preventDefault();
+            setActive(i, true);
+        });
+    });
+
+    if (confLink) {
+        confLink.addEventListener("click", (e) => {
+            e.preventDefault();
+            setActive(slides.length - 1, true);
+        });
+    }
+
+    if (arrows.length >= 2) {
+        arrows[0].addEventListener("click", (e) => {
+            e.preventDefault();
+            prevSlide();
+        });
+
+        arrows[1].addEventListener("click", (e) => {
+            e.preventDefault();
+            nextSlide();
+        });
+    }
+
+    // Инициализация: стрелка вперед активна по умолчанию
+    setActive(0);
+    updateArrows("forward");
+    resetAuto();
+
+    const sliderContainer = document.querySelector(".obj-slider");
+    if (sliderContainer) {
+        sliderContainer.addEventListener("mouseenter", () => {
+            clearInterval(autoTimer);
+        });
+
+        sliderContainer.addEventListener("mouseleave", () => {
+            resetAuto();
+        });
+    }
+});
