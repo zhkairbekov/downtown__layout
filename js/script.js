@@ -33,83 +33,80 @@ $('.partners-carousel__slider').owlCarousel({
     },
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-    const buttons = document.querySelectorAll(".advantages__content__left-side a");
-    const slides = document.querySelectorAll(".slide");
-
-    let currentIndex = 0;
-    let autoSlideInterval;
-
-    function showSlide(index) {
-        if (index === currentIndex) return;
-
-        slides[currentIndex].classList.remove("active");
-        slides[index].classList.add("active");
-
-        buttons[currentIndex].classList.remove("active");
-        buttons[index].classList.add("active");
-
-        currentIndex = index;
-    }
-
-    buttons.forEach((btn, index) => {
-        btn.addEventListener("click", (e) => {
-            e.preventDefault();
-            showSlide(index);
-            resetAutoSlide();
-        });
-    });
-
-    function autoSlide() {
-        let nextIndex = (currentIndex + 1) % slides.length;
-        showSlide(nextIndex);
-    }
-
-    function resetAutoSlide() {
-        clearInterval(autoSlideInterval);
-        autoSlideInterval = setInterval(autoSlide, 10000);
-    }
-
-    showSlide(0);
-    resetAutoSlide();
-});
-
 document.addEventListener("DOMContentLoaded", () => {
     const buttons = document.querySelectorAll(".advantages__content__left-side a");
     const slides = document.querySelectorAll(".adv-slide");
+    const bar = document.getElementById("advantages__content__bar");
+
+    if (!slides.length || !buttons.length || !bar) return;
+
+    const total = slides.length;
+    // initial markup for the bar
+    bar.innerHTML = `<div class="adv-bar__wrap"><span class="adv-bar__current">1</span><span class="adv-bar__slash">/</span><span class="adv-bar__total">${total}</span></div>`;
 
     let current = 0;
-    let autoSlide;
+    let autoTimer = null;
+    const AUTO_DELAY = 10000; // 10s
 
-    function goToSlide(index) {
-        slides.forEach(s => s.classList.remove("active"));
-        buttons.forEach(b => b.classList.remove("active"));
+    function updateBar() {
+        const curEl = bar.querySelector(".adv-bar__current");
+        if (curEl) curEl.textContent = (current + 1).toString();
+    }
 
-        slides[index].classList.add("active");
-        buttons[index].classList.add("active");
+    function setActive(index, userInitiated = false) {
+        index = ((index % total) + total) % total; // безопасный wrap
+        if (index === current && !userInitiated) return;
+
+        slides.forEach((s, i) => s.classList.toggle("active", i === index));
+        buttons.forEach((b, i) => b.classList.toggle("active", i === index));
 
         current = index;
-        resetTimer();
+        updateBar();
+        resetAuto();
     }
 
     function nextSlide() {
-        let next = current + 1 >= slides.length ? 0 : current + 1;
-        goToSlide(next);
+        setActive(current + 1);
     }
 
-    function resetTimer() {
-        clearInterval(autoSlide);
-        autoSlide = setInterval(nextSlide, 10000);
+    function resetAuto() {
+        clearInterval(autoTimer);
+        autoTimer = setInterval(nextSlide, AUTO_DELAY);
     }
 
-    // Clicks
-    buttons.forEach(btn => {
-        btn.addEventListener("click", e => {
+    // click handlers
+    buttons.forEach((btn, i) => {
+        btn.addEventListener("click", (e) => {
             e.preventDefault();
-            goToSlide(Number(btn.dataset.slide));
+            setActive(i, true);
         });
     });
 
-    // Start autoplay
-    resetTimer();
+    // initialize first slide
+    setActive(0);
+
+    // start autoplay
+    resetAuto();
+
+    // Если другой код (плагин) будет переключать слайды, слушаем изменения классов и синхронизируем бар
+    const obs = new MutationObserver(mutations => {
+        for (const m of mutations) {
+            if (m.type === "attributes" && m.attributeName === "class") {
+                const target = m.target;
+                if (target.classList && target.classList.contains("active")) {
+                    const idx = Array.prototype.indexOf.call(slides, target);
+                    if (idx !== -1 && idx !== current) {
+                        // reflect externally-made change
+                        current = idx;
+                        buttons.forEach((b, i) => b.classList.toggle("active", i === current));
+                        updateBar();
+                        resetAuto();
+                    }
+                }
+            }
+        }
+    });
+
+    slides.forEach(s => obs.observe(s, { attributes: true }));
+
 });
