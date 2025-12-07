@@ -588,6 +588,10 @@
  ---------------------------------
  */
 
+.objects {
+    margin-bottom: 120px;
+}
+
 .objects h3 {
     font-family   : Montserrat;
     font-weight   : 400;
@@ -784,9 +788,6 @@
     }
 }
 
-
-/* Добавьте эти стили к вашему существующему CSS */
-
 .obj-slider {
     position: relative;
     overflow: hidden;
@@ -811,9 +812,6 @@
     left          : 10px;
 }
 
-
-/* Обновленные стили для стрелок */
-
 .obj-slider__arrows a {
     display        : inline-flex;
     align-items    : center;
@@ -822,20 +820,12 @@
     transition     : transform 0.3s ease;
 }
 
-
-/* Активная стрелка (увеличена и подсвечена) */
-
-.obj-slider__arrows a.active {
+.obj-slider__arrows a.active,
+.obj-slider__arrows a:hover {
     transform: scale(1.8);
 }
 
-.obj-slider__arrows a.active svg path {
+.obj-slider__arrows a.active svg path,
+.obj-slider__arrows a:hover svg path {
     stroke: #C25D49;
-}
-
-
-/* Убираем hover эффекты, чтобы не мешать логике active */
-
-.obj-slider__arrows a:hover {
-    /* оставляем пустым или можно добавить небольшой эффект */
 }
