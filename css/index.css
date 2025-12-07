@@ -772,10 +772,12 @@
         position  : relative;
         margin-top: 60px;
         width     : 100%;
+        left      : 0;
     }
 
     .obj-slider__arrows {
         bottom: 10%;
+        right : 2px;
     }
 }
 
