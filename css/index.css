@@ -812,7 +812,7 @@
 }
 
 
-/* Плавная анимация для стрелок при наведении */
+/* Обновленные стили для стрелок */
 
 .obj-slider__arrows a {
     display        : inline-flex;
@@ -822,16 +822,20 @@
     transition     : transform 0.3s ease;
 }
 
-.obj-slider__arrows a:hover,
+
+/* Активная стрелка (увеличена и подсвечена) */
+
 .obj-slider__arrows a.active {
     transform: scale(1.8);
 }
 
-.obj-slider__arrows a svg {
-    transition: stroke 0.3s ease;
-}
-
-.obj-slider__arrows a:hover svg path,
 .obj-slider__arrows a.active svg path {
     stroke: #C25D49;
+}
+
+
+/* Убираем hover эффекты, чтобы не мешать логике active */
+
+.obj-slider__arrows a:hover {
+    /* оставляем пустым или можно добавить небольшой эффект */
 }
