@@ -330,15 +330,6 @@
     gap     : 12px;
 }
 
-.advantages__content__right-side .adv-slide__text p:first-child {
-    font-family: Montserrat;
-    font-weight: 600;
-    font-size  : 48px;
-    line-height: 100%;
-    color      : #fff;
-    margin     : 0;
-}
-
 .advantages__content__right-side .adv-slide__text p {
     font-family  : Montserrat;
     font-weight  : 400;
@@ -828,4 +819,31 @@
 .obj-slider__arrows a.active svg path,
 .obj-slider__arrows a:hover svg path {
     stroke: #C25D49;
+}
+
+
+/* 
+ ---------------------------------
+ ----------- Условия -------------
+ ---------------------------------
+ */
+
+.conditions h3 {
+    font-family   : Montserrat;
+    font-weight   : 500;
+    font-size     : 15px;
+    line-height   : 100%;
+    text-transform: uppercase;
+    color         : #383838;
+    margin-bottom : 10px;
+    opacity       : 0.5;
+}
+
+.conditions h2 {
+    font-family  : Montserrat;
+    font-weight  : 500;
+    font-size    : 50px;
+    line-height  : 60px;
+    color        : #383838;
+    margin-bottom: 0;
 }
