@@ -41,27 +41,53 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!slides.length || !buttons.length || !bar) return;
 
     const total = slides.length;
-    // initial markup for the bar
-    bar.innerHTML = `<div class="adv-bar__wrap"><span class="adv-bar__current">1</span><span class="adv-bar__slash">/</span><span class="adv-bar__total">${total}</span></div>`;
 
+    // markup: числа + линия прогресса
+    bar.innerHTML = `
+    <div class="adv-bar__container">
+      <div class="adv-bar__wrap">
+        <span class="adv-bar__current">1</span>
+        <span class="adv-bar__slash">/</span>
+        <span class="adv-bar__total">${total}</span>
+      </div>
+      <div class="adv-bar__line" aria-hidden="true">
+        <div class="adv-bar__line-fill"></div>
+      </div>
+    </div>
+  `;
+
+    const fillEl = bar.querySelector(".adv-bar__line-fill");
     let current = 0;
     let autoTimer = null;
     const AUTO_DELAY = 10000; // 10s
 
-    function updateBar() {
+    function updateBarVisual(animate = true) {
+        // число
         const curEl = bar.querySelector(".adv-bar__current");
         if (curEl) curEl.textContent = (current + 1).toString();
+
+        // ширина полоски: (current+1) / total
+        const percent = Math.round(((current + 1) / total) * 100);
+        if (!fillEl) return;
+
+        if (animate) {
+            fillEl.classList.add("buzz");
+            // убрать эффект через 300ms
+            clearTimeout(fillEl._buzzTO);
+            fillEl._buzzTO = setTimeout(() => fillEl.classList.remove("buzz"), 300);
+        }
+        fillEl.style.width = percent + "%";
     }
 
     function setActive(index, userInitiated = false) {
-        index = ((index % total) + total) % total; // безопасный wrap
+        index = ((index % total) + total) % total;
         if (index === current && !userInitiated) return;
 
         slides.forEach((s, i) => s.classList.toggle("active", i === index));
         buttons.forEach((b, i) => b.classList.toggle("active", i === index));
 
         current = index;
-        updateBar();
+        updateBarVisual(true);
         resetAuto();
     }
 
@@ -82,13 +108,12 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // initialize first slide
+    // init
+    updateBarVisual(false);
     setActive(0);
-
-    // start autoplay
     resetAuto();
 
-    // Если другой код (плагин) будет переключать слайды, слушаем изменения классов и синхронизируем бар
+    // Если слайды будут переключаться внешним кодом — синхронизируемся
     const obs = new MutationObserver(mutations => {
         for (const m of mutations) {
             if (m.type === "attributes" && m.attributeName === "class") {
@@ -96,10 +121,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (target.classList && target.classList.contains("active")) {
                     const idx = Array.prototype.indexOf.call(slides, target);
                     if (idx !== -1 && idx !== current) {
-                        // reflect externally-made change
                         current = idx;
                         buttons.forEach((b, i) => b.classList.toggle("active", i === current));
-                        updateBar();
+                        updateBarVisual(true);
                         resetAuto();
                     }
                 }
@@ -108,5 +132,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     slides.forEach(s => obs.observe(s, { attributes: true }));
-
 });
