@@ -258,3 +258,20 @@ document.addEventListener('keydown', function (e) {
         });
     }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const items = document.querySelectorAll(".faq_accordeon__item");
+
+    items.forEach(item => {
+        const btn = item.querySelector(".faq_accordeon__item__question");
+
+        btn.addEventListener("click", () => {
+            // Если нужен аккордеон в режиме "только один открыт":
+            items.forEach(i => {
+                if (i !== item) i.classList.remove("active");
+            });
+
+            item.classList.toggle("active");
+        });
+    });
+});

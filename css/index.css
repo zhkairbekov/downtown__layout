@@ -1038,12 +1038,101 @@
  */
 
 .faq {
-    margin-top: 120px;
+    margin-top   : 120px;
+    margin-bottom: 120px;
 }
 
 .faq h2 {
+    font-family  : Montserrat;
+    font-weight  : 500;
+    font-size    : 50px;
+    line-height  : 60px;
+    margin-bottom: 45px;
+}
+
+
+/* ===== Список ===== */
+
+.faq_accordeon__list {
+    display       : flex;
+    flex-direction: column;
+}
+
+
+/* ===== Элемент аккордеона ===== */
+
+.faq_accordeon__item {
+    border-radius: 12px;
+    overflow     : hidden;
+    transition   : 0.3s ease;
+}
+
+
+/* ===== Вопрос ===== */
+
+.faq_accordeon__item__question {
+    padding        : 25px 0;
+    display        : flex;
+    justify-content: space-between;
+    align-items    : center;
+    cursor         : pointer;
+}
+
+.faq_accordeon__item__question h5 {
+    margin     : 0;
     font-family: Montserrat;
-    font-weight: 500;
-    font-size  : 50px;
-    line-height: 60px;
+    font-weight: 700;
+    font-size  : 22px;
+    line-height: 150%;
+    color      : #333333;
+}
+
+
+/* SVG + rotate */
+
+.faq_accordeon__item__question svg {
+    transition: transform 0.3s ease;
+}
+
+.faq_accordeon__item.active .faq_accordeon__item__question {
+    h5 {
+        color: #C25D49;
+    }
+
+    svg {
+        transform: rotate(45deg);
+
+        path {
+            fill: #C25D49;
+        }
+    }
+}
+
+
+/* ===== Ответ ===== */
+
+.faq_accordeon__item__answer {
+    max-height: 0;
+    overflow  : hidden;
+    transition: max-height 0.35s ease, padding 0.3s ease;
+}
+
+.faq_accordeon__item.active .faq_accordeon__item__answer {
+    padding-bottom: 45px;
+    max-height    : 500px;
+    /* достаточно для текста */
+}
+
+.faq_accordeon__item__answer p {
+    margin     : 0;
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size  : 18px;
+    line-height: 160%;
+    color      : #000000;
+}
+
+.faq_accordeon__list hr {
+    margin    : 0;
+    border-top: 1px solid #C0C2D7;
 }
