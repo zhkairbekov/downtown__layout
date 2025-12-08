@@ -1,5 +1,3 @@
-// Partners Carousel Initialization
-
 $('.partners-carousel__slider').owlCarousel({
     items: 6,
     margin: 121,
@@ -42,7 +40,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const total = slides.length;
 
-    // markup: числа + линия прогресса
     bar.innerHTML = `
     <div class="adv-bar__container">
       <div class="adv-bar__wrap">
@@ -59,20 +56,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const fillEl = bar.querySelector(".adv-bar__line-fill");
     let current = 0;
     let autoTimer = null;
-    const AUTO_DELAY = 10000; // 10s
+    const AUTO_DELAY = 10000;
 
     function updateBarVisual(animate = true) {
-        // число
         const curEl = bar.querySelector(".adv-bar__current");
         if (curEl) curEl.textContent = (current + 1).toString();
 
-        // ширина полоски: (current+1) / total
         const percent = Math.round(((current + 1) / total) * 100);
         if (!fillEl) return;
 
         if (animate) {
             fillEl.classList.add("buzz");
-            // убрать эффект через 300ms
             clearTimeout(fillEl._buzzTO);
             fillEl._buzzTO = setTimeout(() => fillEl.classList.remove("buzz"), 300);
         }
@@ -100,7 +94,6 @@ document.addEventListener("DOMContentLoaded", () => {
         autoTimer = setInterval(nextSlide, AUTO_DELAY);
     }
 
-    // click handlers
     buttons.forEach((btn, i) => {
         btn.addEventListener("click", (e) => {
             e.preventDefault();
@@ -108,12 +101,10 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // init
     updateBarVisual(false);
     setActive(0);
     resetAuto();
 
-    // Если слайды будут переключаться внешним кодом — синхронизируемся
     const obs = new MutationObserver(mutations => {
         for (const m of mutations) {
             if (m.type === "attributes" && m.attributeName === "class") {
@@ -146,20 +137,16 @@ document.addEventListener("DOMContentLoaded", () => {
     let autoTimer = null;
     const AUTO_DELAY = 10000;
 
-    // Функция для обновления состояния стрелок
     function updateArrows(direction) {
         arrows.forEach(arrow => arrow.classList.remove("active"));
 
         if (direction === "forward") {
-            // Вторая стрелка (вперед) становится активной
             arrows[1].classList.add("active");
         } else if (direction === "backward") {
-            // Первая стрелка (назад) становится активной
             arrows[0].classList.add("active");
         }
     }
 
-    // Функция для установки активного слайда
     function setActive(index, userInitiated = false, direction = null) {
         index = ((index % slides.length) + slides.length) % slides.length;
 
@@ -178,7 +165,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         current = index;
 
-        // Обновляем стрелки только если указано направление
         if (direction) {
             updateArrows(direction);
         }
@@ -225,7 +211,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Инициализация: стрелка вперед активна по умолчанию
     setActive(0);
     updateArrows("forward");
     resetAuto();
@@ -243,7 +228,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener('click', function (e) {
-    // клик по flip-card — переключаем
     const card = e.target.closest('.flip-card');
     if (card) {
         card.classList.toggle('is-flipped');
@@ -251,14 +235,12 @@ document.addEventListener('click', function (e) {
         return;
     }
 
-    // клик вне карточки — закрываем все перевёрнутые
     document.querySelectorAll('.flip-card.is-flipped').forEach(c => {
         c.classList.remove('is-flipped');
         c.setAttribute('aria-pressed', 'false');
     });
 });
 
-// keyboard accessibility: Enter / Space flips focused card
 document.addEventListener('keydown', function (e) {
     if (e.code === 'Enter' || e.code === 'Space') {
         const active = document.activeElement;
@@ -269,7 +251,6 @@ document.addEventListener('keydown', function (e) {
         }
     }
 
-    // Esc — закрыть все
     if (e.code === 'Escape') {
         document.querySelectorAll('.flip-card.is-flipped').forEach(c => {
             c.classList.remove('is-flipped');
