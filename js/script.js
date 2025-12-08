@@ -241,3 +241,39 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+
+document.addEventListener('click', function (e) {
+    // клик по flip-card — переключаем
+    const card = e.target.closest('.flip-card');
+    if (card) {
+        card.classList.toggle('is-flipped');
+        card.setAttribute('aria-pressed', card.classList.contains('is-flipped') ? 'true' : 'false');
+        return;
+    }
+
+    // клик вне карточки — закрываем все перевёрнутые
+    document.querySelectorAll('.flip-card.is-flipped').forEach(c => {
+        c.classList.remove('is-flipped');
+        c.setAttribute('aria-pressed', 'false');
+    });
+});
+
+// keyboard accessibility: Enter / Space flips focused card
+document.addEventListener('keydown', function (e) {
+    if (e.code === 'Enter' || e.code === 'Space') {
+        const active = document.activeElement;
+        if (active && active.classList && active.classList.contains('flip-card')) {
+            e.preventDefault();
+            active.classList.toggle('is-flipped');
+            active.setAttribute('aria-pressed', active.classList.contains('is-flipped') ? 'true' : 'false');
+        }
+    }
+
+    // Esc — закрыть все
+    if (e.code === 'Escape') {
+        document.querySelectorAll('.flip-card.is-flipped').forEach(c => {
+            c.classList.remove('is-flipped');
+            c.setAttribute('aria-pressed', 'false');
+        });
+    }
+});

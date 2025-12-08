@@ -1,63 +1,49 @@
 <!doctype html>
 <html lang="ru">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <title>Главная</title>
-        <link
-            rel="icon"
-            type="image/png"
-            href="img/favicon/favicon-96x96.png"
-            sizes="96x96"
-        >
-        <link rel="icon" type="image/svg+xml" href="img/favicon/favicon.svg">
-        <link rel="shortcut icon" href="img/favicon/favicon.ico">
-        <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
-        <meta name="apple-mobile-web-app-title" content="Downtown">
-        <link rel="manifest" href="img/favicon/site.webmanifest">
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-            crossorigin="anonymous"
-        >
-        <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
-        <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
-        <link rel="stylesheet" href="css/general.css">
-        <link rel="stylesheet" href="css/index.css">
-    </head>
-    <body>
-        <header>
-            <div class="container header">
-                <div class="header__logo">
-                    <a href="#">
-                        <img class="w-lg-100" src="img/logo-light.png" alt="Logo">
-                    </a>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Главная</title>
+    <link rel="icon" type="image/png" href="img/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="img/favicon/favicon.svg">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="Downtown">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <header>
+        <div class="container header">
+            <div class="header__logo">
+                <a href="#">
+                    <img class="w-lg-100" src="img/logo-light.png" alt="Logo">
+                </a>
+            </div>
+            <nav class="header__menu">
+                <div class="header-menu">
+                    <a class="header-menu__item" href="#">Главная</a>
+                    <a class="header-menu__item" href="#">О компании</a>
+                    <a class="header-menu__item" href="#">Объекты</a>
+                    <a class="header-menu__item" href="#">FAQ</a>
+                    <a class="header-menu__item" href="#">Отзывы</a>
+                    <a class="header-menu__item" href="#">Вакансии</a>
+                    <a class="header-menu__item" href="#">Контакты</a>
+                    <a class="header-menu__item" href="#">Галерея</a>
                 </div>
-                <nav class="header__menu">
-                    <div class="header-menu">
-                        <a class="header-menu__item" href="#">Главная</a>
-                        <a class="header-menu__item" href="#">О компании</a>
-                        <a class="header-menu__item" href="#">Объекты</a>
-                        <a class="header-menu__item" href="#">FAQ</a>
-                        <a class="header-menu__item" href="#">Отзывы</a>
-                        <a class="header-menu__item" href="#">Вакансии</a>
-                        <a class="header-menu__item" href="#">Контакты</a>
-                        <a class="header-menu__item" href="#">Галерея</a>
-                    </div>
-                </nav>
-                <div class="header__buttons">
-                    <div class="dropdown">
-                        <a
-                            class="langs__select-btn dropdown-toggle"
-                            id="dropdownMenuButton"
-                            href="#"
-                            data-bs-toggle="dropdown"
-                            aria-expanded="false"
-                        >
+            </nav>
+            <div class="header__buttons">
+                <div class="dropdown">
+                    <a class="langs__select-btn dropdown-toggle" id="dropdownMenuButton" href="#" data-bs-toggle="dropdown" aria-expanded="false">
                             Ru
                             <svg
                                 id="dropdownMenuArrow"
@@ -76,69 +62,46 @@
                                 />
                             </svg>
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Kz</a>
-                            <a class="dropdown-item" href="#">En</a>
-                        </div>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Kz</a>
+                        <a class="dropdown-item" href="#">En</a>
                     </div>
-                    <button
-                        id="burgerBtn"
-                        class="header__burger"
-                        aria-label="Открыть меню"
-                        aria-expanded="false"
-                    >
+                </div>
+                <button id="burgerBtn" class="header__burger" aria-label="Открыть меню" aria-expanded="false">
                         <span class="burger-line"></span>
                         <span class="burger-line"></span>
                         <span class="burger-line"></span>
                     </button>
-                </div>
             </div>
-        </header>
-        <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
-            <div
-                class="mobile-menu__panel"
-                role="dialog"
-                aria-modal="true"
-                aria-labelledby="mobileMenuTitle"
-            >
-                <div class="mobile-menu__content container">
-                    <nav class="mobile-menu__nav">
-                        <a class="mobile-menu__link" href="#">Главная</a>
-                        <a class="mobile-menu__link" href="#">О компании</a>
-                        <a class="mobile-menu__link" href="#">Объекты</a>
-                        <a class="mobile-menu__link" href="#">FAQ</a>
-                        <a class="mobile-menu__link" href="#">Отзывы</a>
-                        <a class="mobile-menu__link" href="#">Вакансии</a>
-                        <a class="mobile-menu__link" href="#">Контакты</a>
-                        <a class="mobile-menu__link" href="#">Галерея</a>
-                    </nav>
-                    <div class="mobile-menu__actions">
-                        <a href="#" class="btn mobile-menu__btn d-none">Оставить заявку</a>
-                        <a href="#" class="btn mobile-menu__btn">Оставить заявку</a>
-                        <a href="#" class="btn mobile-menu__btn">Узнать цену</a>
-                    </div>
-                    <div class="mobile-menu__footer">
-                        <a class="mobile-menu__phone" href="tel:+77001234567">
-                            <svg
-                                width="15"
-                                height="15"
-                                viewBox="0 0 15 15"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
+        </div>
+    </header>
+    <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
+        <div class="mobile-menu__panel" role="dialog" aria-modal="true" aria-labelledby="mobileMenuTitle">
+            <div class="mobile-menu__content container">
+                <nav class="mobile-menu__nav">
+                    <a class="mobile-menu__link" href="#">Главная</a>
+                    <a class="mobile-menu__link" href="#">О компании</a>
+                    <a class="mobile-menu__link" href="#">Объекты</a>
+                    <a class="mobile-menu__link" href="#">FAQ</a>
+                    <a class="mobile-menu__link" href="#">Отзывы</a>
+                    <a class="mobile-menu__link" href="#">Вакансии</a>
+                    <a class="mobile-menu__link" href="#">Контакты</a>
+                    <a class="mobile-menu__link" href="#">Галерея</a>
+                </nav>
+                <div class="mobile-menu__actions">
+                    <a href="#" class="btn mobile-menu__btn d-none">Оставить заявку</a>
+                    <a href="#" class="btn mobile-menu__btn">Оставить заявку</a>
+                    <a href="#" class="btn mobile-menu__btn">Узнать цену</a>
+                </div>
+                <div class="mobile-menu__footer">
+                    <a class="mobile-menu__phone" href="tel:+77001234567">
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M15.0004 11.1833C15.0002 11.1833 15 11.1835 15 11.1838V14.13C15.0001 14.341 14.9202 14.5441 14.7763 14.6985C14.6325 14.8528 14.4355 14.9469 14.225 14.9617C13.8608 14.9867 13.5633 15 13.3333 15C5.96917 15 0 9.03083 0 1.66667C0 1.43667 0.0125 1.13917 0.0383333 0.775C0.053102 0.564537 0.147151 0.367509 0.301503 0.223674C0.455855 0.079839 0.659019 -9.53609e-05 0.87 2.13816e-07H3.81667C3.92003 -0.000104445 4.01975 0.0382159 4.09644 0.107517C4.17313 0.176818 4.22133 0.272152 4.23167 0.375C4.25083 0.566667 4.26833 0.719167 4.285 0.835C4.45061 1.99077 4.79 3.11486 5.29167 4.16917C5.37083 4.33583 5.31917 4.535 5.16917 4.64167L4.68105 4.99045C3.91614 5.53702 3.61879 6.55445 4.11299 7.3542C5.00046 8.79038 6.21079 10.0007 7.647 10.8881C8.44661 11.3821 9.46382 11.085 10.0105 10.3204L10.3575 9.835C10.41 9.76167 10.4865 9.70907 10.5737 9.68638C10.661 9.66369 10.7535 9.67234 10.835 9.71083C11.8892 10.2116 13.013 10.5501 14.1683 10.715C14.2842 10.7317 14.4367 10.75 14.6267 10.7683C14.7294 10.7789 14.8245 10.8271 14.8936 10.9038C14.9627 10.9804 15.0009 11.0798 15.0008 11.1829C15.0008 11.1831 15.0006 11.1833 15.0004 11.1833Z" fill="#C25D49"/>
-                            </svg>
-                            ( +123 ) 456 7890
-                        </a>
-                        <div class="mobile-menu__socials">
-                            <a href="#" aria-label="YouTube" class="social-link">
-                                <svg
-                                    width="29"
-                                    height="20"
-                                    viewBox="0 0 29 20"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
+                            </svg> ( +123 ) 456 7890
+                    </a>
+                    <div class="mobile-menu__socials">
+                        <a href="#" aria-label="YouTube" class="social-link">
+                            <svg width="29" height="20" viewBox="0 0 29 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         fill-rule="evenodd"
                                         clip-rule="evenodd"
@@ -146,15 +109,9 @@
                                         fill="#C25D49"
                                     />
                                 </svg>
-                            </a>
-                            <a href="#" aria-label="Instagram" class="social-link">
-                                <svg
-                                    width="26"
-                                    height="26"
-                                    viewBox="0 0 26 26"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
+                        </a>
+                        <a href="#" aria-label="Instagram" class="social-link">
+                            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g clip-path="url(#clip0_121_2437)">
                                         <path d="M12.6748 9.50675C11.8343 9.50675 11.0283 9.84063 10.434 10.4349C9.83965 11.0293 9.50577 11.8353 9.50577 12.6758C9.50577 13.5163 9.83965 14.3223 10.434 14.9167C11.0283 15.511 11.8343 15.8448 12.6748 15.8448C13.5153 15.8448 14.3214 15.511 14.9157 14.9167C15.51 14.3223 15.8439 13.5163 15.8439 12.6758C15.8439 11.8353 15.51 11.0293 14.9157 10.4349C14.3214 9.84063 13.5153 9.50675 12.6748 9.50675ZM12.6748 7.39405C14.0756 7.39405 15.4191 7.95052 16.4096 8.94104C17.4001 9.93156 17.9566 11.275 17.9566 12.6758C17.9566 14.0766 17.4001 15.42 16.4096 16.4106C15.4191 17.4011 14.0756 17.9575 12.6748 17.9575C11.274 17.9575 9.93058 17.4011 8.94006 16.4106C7.94954 15.42 7.39307 14.0766 7.39307 12.6758C7.39307 11.275 7.94954 9.93156 8.94006 8.94104C9.93058 7.95052 11.274 7.39405 12.6748 7.39405ZM19.5411 7.12996C19.5411 7.48016 19.402 7.81602 19.1543 8.06365C18.9067 8.31128 18.5709 8.4504 18.2207 8.4504C17.8704 8.4504 17.5346 8.31128 17.287 8.06365C17.0393 7.81602 16.9002 7.48016 16.9002 7.12996C16.9002 6.77976 17.0393 6.4439 17.287 6.19627C17.5346 5.94864 17.8704 5.80953 18.2207 5.80953C18.5709 5.80953 18.9067 5.94864 19.1543 6.19627C19.402 6.4439 19.5411 6.77976 19.5411 7.12996ZM12.6748 4.225C10.0614 4.225 9.63465 4.2324 8.41879 4.28627C7.59061 4.32536 7.03497 4.43627 6.51947 4.63698C6.06102 4.81445 5.73038 5.02677 5.37862 5.37959C5.04799 5.69903 4.79377 6.08902 4.63495 6.52045C4.43424 7.03806 4.32332 7.59264 4.28529 8.41977C4.23036 9.58598 4.22403 9.99373 4.22403 12.6758C4.22403 15.2892 4.23142 15.716 4.28529 16.9318C4.32438 17.7589 4.4353 18.3156 4.63495 18.8301C4.81453 19.2896 5.0258 19.6202 5.3765 19.9709C5.73249 20.3259 6.06313 20.5382 6.51736 20.7136C7.0392 20.9153 7.59484 21.0273 8.41879 21.0653C9.585 21.1203 9.99275 21.1266 12.6748 21.1266C15.2882 21.1266 15.715 21.1192 16.9308 21.0653C17.7569 21.0262 18.3136 20.9153 18.8291 20.7157C19.2865 20.5371 19.6193 20.3248 19.97 19.9741C20.326 19.6181 20.5383 19.2875 20.7136 18.8333C20.9143 18.3125 21.0263 17.7558 21.0643 16.9318C21.1193 15.7656 21.1256 15.3579 21.1256 12.6758C21.1256 10.0624 21.1182 9.63562 21.0643 8.41977C21.0253 7.5937 20.9143 7.03595 20.7136 6.52045C20.5544 6.08946 20.3007 5.69962 19.971 5.37959C19.6517 5.04879 19.2617 4.79455 18.8302 4.63592C18.3126 4.43522 17.7569 4.3243 16.9308 4.28627C15.7646 4.23134 15.3569 4.225 12.6748 4.225ZM12.6748 2.1123C15.5449 2.1123 15.903 2.12287 17.0291 2.17569C18.1541 2.2285 18.92 2.40491 19.5939 2.66689C20.2911 2.9352 20.8784 3.29858 21.4658 3.88486C22.0029 4.41292 22.4185 5.05169 22.6837 5.75671C22.9446 6.4296 23.1221 7.19651 23.1749 8.32152C23.2246 9.44759 23.2383 9.8057 23.2383 12.6758C23.2383 15.5459 23.2277 15.904 23.1749 17.0301C23.1221 18.1551 22.9446 18.9209 22.6837 19.5949C22.4193 20.3003 22.0036 20.9392 21.4658 21.4667C20.9375 22.0037 20.2988 22.4193 19.5939 22.6847C18.921 22.9456 18.1541 23.1231 17.0291 23.1759C15.903 23.2256 15.5449 23.2393 12.6748 23.2393C9.80472 23.2393 9.44662 23.2287 8.32055 23.1759C7.19554 23.1231 6.42968 22.9456 5.75573 22.6847C5.05044 22.4201 4.41156 22.0044 3.88388 21.4667C3.34663 20.9388 2.93098 20.3 2.66591 19.5949C2.40394 18.922 2.22753 18.1551 2.17471 17.0301C2.12506 15.904 2.11133 15.5459 2.11133 12.6758C2.11133 9.8057 2.12189 9.44759 2.17471 8.32152C2.22753 7.19546 2.40394 6.43066 2.66591 5.75671C2.93025 5.05126 3.34599 4.41232 3.88388 3.88486C4.41171 3.34742 5.05054 2.93175 5.75573 2.66689C6.42968 2.40491 7.19448 2.2285 8.32055 2.17569C9.44662 2.12604 9.80472 2.1123 12.6748 2.1123Z" fill="#C25D49"/>
                                     </g>
@@ -164,15 +121,9 @@
                                         </clipPath>
                                     </defs>
                                 </svg>
-                            </a>
-                            <a href="#" aria-label="What's app" class="social-link">
-                                <svg
-                                    width="23"
-                                    height="23"
-                                    viewBox="0 0 23 23"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
+                        </a>
+                        <a href="#" aria-label="What's app" class="social-link">
+                            <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         fill-rule="evenodd"
                                         clip-rule="evenodd"
@@ -180,26 +131,14 @@
                                         fill="#C25D49"
                                     />
                                 </svg>
-                            </a>
-                            <a href="#" aria-label="VK" class="social-link">
-                                <svg
-                                    width="23"
-                                    height="15"
-                                    viewBox="0 0 23 15"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
+                        </a>
+                        <a href="#" aria-label="VK" class="social-link">
+                            <svg width="23" height="15" viewBox="0 0 23 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M12.5271 15C4.66889 15 0.186758 9.36937 0 0H3.93629C4.06558 6.87688 6.96745 9.78979 9.26601 10.3904V0H12.9726V5.93093C15.2424 5.67568 17.6269 2.97297 18.4314 0H22.1379C21.5202 3.66366 18.9343 6.36637 17.0954 7.47748C18.9343 8.37838 21.8794 10.7357 23 15H18.9199C18.0436 12.1471 15.8602 9.93994 12.9726 9.63964V15H12.5271Z" fill="#C25D49"/>
                                 </svg>
-                            </a>
-                            <a href="#" aria-label="Telegram" class="social-link">
-                                <svg
-                                    width="22"
-                                    height="20"
-                                    viewBox="0 0 22 20"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
+                        </a>
+                        <a href="#" aria-label="Telegram" class="social-link">
+                            <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         fill-rule="evenodd"
                                         clip-rule="evenodd"
@@ -207,33 +146,33 @@
                                         fill="#C25D49"
                                     />
                                 </svg>
-                            </a>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
-        <main>
-            <section class="start-window">
-                <div class="black">
-                    <div class="start-window__content container">
-                        <div class="start-window__text">
-                            <h1>
-                                Мы создаём комфортное
-                                <br>
-                                <span>деловое пространство</span>
-                            </h1>
-                            <div class="start-window__buttons">
-                                <a href="#">Свободные офисы</a>
-                                <a href="#">Конференц зал</a>
-                            </div>
+    </div>
+    <main>
+        <section class="start-window">
+            <div class="black">
+                <div class="start-window__content container">
+                    <div class="start-window__text">
+                        <h1>
+                            Мы создаём комфортное
+                            <br>
+                            <span>деловое пространство</span>
+                        </h1>
+                        <div class="start-window__buttons">
+                            <a href="#">Свободные офисы</a>
+                            <a href="#">Конференц зал</a>
                         </div>
-                        <div class="start-window__additional">
-                            <div class="additional__item">
-                                <p>Описание будет здесь, нужны данные вашего сайта. Описание будет здесь, нужны данные вашего сайта.</p>
-                            </div>
-                            <div class="additional__item">
-                                <a href="#">
+                    </div>
+                    <div class="start-window__additional">
+                        <div class="additional__item">
+                            <p>Описание будет здесь, нужны данные вашего сайта. Описание будет здесь, нужны данные вашего сайта.</p>
+                        </div>
+                        <div class="additional__item">
+                            <a href="#">
                                     Шоурил бизнес офисов
                                     <svg
                                         width="113"
@@ -253,113 +192,95 @@
                                         <path d="M78.5 16.5928C78.5 14.9049 80.4621 13.976 81.7677 15.0459L95.6122 26.391C96.5887 27.1911 96.5887 28.6847 95.6122 29.4849L81.7677 40.83C80.4621 41.8999 78.5 40.971 78.5 39.283V16.5928Z" fill="white"/>
                                     </svg>
                                 </a>
-                            </div>
                         </div>
-                        <div class="start-window__left-side">
-                            <div class="left-side__content">
-                                <div class="start-window__left-side__socials">
-                                    <a href="#">
-                                        <svg
-                                            width="22"
-                                            height="22"
-                                            viewBox="0 0 22 22"
-                                            fill="none"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                        >
+                    </div>
+                    <div class="start-window__left-side">
+                        <div class="left-side__content">
+                            <div class="start-window__left-side__socials">
+                                <a href="#">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <g opacity="0.8">
                                                 <path d="M6.1627 20.8939C6.21759 20.8697 6.26313 20.8471 6.29966 20.8261C6.95683 20.4791 7.76355 19.8161 8.71992 18.8372L8.74186 18.8165L8.75255 18.8063L8.76357 18.7957V18.7852C9.20885 18.3409 9.50838 18.0596 9.6616 17.9418C9.95366 17.7264 10.2493 17.678 10.5488 17.7958C10.7751 17.8791 11.253 18.1917 11.9832 18.733C12.3701 19.0177 12.6803 19.2432 12.9139 19.4098C14.5931 20.6109 15.6662 21.1316 16.1335 20.9719L16.2427 20.9098C16.3084 20.8681 16.3685 20.7605 16.4234 20.5871C16.4781 20.4134 16.4872 20.1913 16.4507 19.9206L16.4289 16.9217C16.447 16.8731 16.4453 16.8036 16.4234 16.7133C16.4014 16.6231 16.3904 16.5779 16.3904 16.5779L16.363 16.5257L16.3301 16.4843C16.3083 16.4495 16.27 16.4113 16.2152 16.3696C16.1606 16.3281 16.0966 16.2936 16.0236 16.2657C15.1402 15.9392 14.3189 15.5681 13.5597 15.1514C13.107 14.8946 12.7147 14.6587 12.3825 14.4433C12.0503 14.228 11.8057 14.0475 11.6488 13.9018C11.4919 13.7559 11.3661 13.6243 11.2711 13.506C11.176 13.3881 11.136 13.298 11.1507 13.2355C11.1652 13.1729 11.1798 13.1141 11.1944 13.0583C11.2602 12.9612 11.3496 12.883 11.4628 12.8241C11.5759 12.765 11.7183 12.7251 11.8899 12.7044C12.0616 12.6835 12.2092 12.6714 12.3334 12.6679C12.4573 12.6646 12.6328 12.6661 12.8591 12.6732C13.0855 12.6804 13.2387 12.6835 13.319 12.6835C13.5964 12.6835 13.8976 12.6887 14.2224 12.699C14.5473 12.7096 14.8047 12.7181 14.9943 12.7251C15.1842 12.7322 15.385 12.7355 15.5967 12.7355C15.8084 12.7355 15.9745 12.7232 16.095 12.699C16.2153 12.6752 16.3322 12.6384 16.4454 12.59C16.5586 12.5413 16.6461 12.4701 16.7082 12.3766C16.7703 12.2829 16.8196 12.1663 16.8561 12.0277C16.9437 11.6598 16.9911 11.1911 16.9984 10.6218C17.013 9.33065 16.9253 8.50102 16.7355 8.13308C16.6553 7.98731 16.5457 7.85538 16.4071 7.73743C16.2465 7.61244 16.1588 7.59501 16.1443 7.68525C16.0787 8.10183 15.9217 8.39674 15.6735 8.57032L15.542 8.63287C15.4471 8.68152 15.2791 8.7301 15.0383 8.77872C14.7974 8.82727 14.5309 8.8586 14.2391 8.87237C13.706 8.90703 13.2497 8.90703 12.8702 8.87237C12.4905 8.83762 12.1949 8.8048 11.9831 8.77347C11.7714 8.74214 11.5998 8.69531 11.4684 8.63287C11.3371 8.57032 11.2568 8.5287 11.2276 8.50784C11.1984 8.487 11.1801 8.46965 11.1729 8.45586C11.1365 8.36563 11.118 8.27179 11.118 8.17466C11.118 8.07739 11.1691 7.95944 11.2715 7.82063C11.3737 7.68185 11.5141 7.53783 11.693 7.38853C11.872 7.23925 12.1219 7.07091 12.4432 6.88339C12.7644 6.69603 13.144 6.50163 13.582 6.30031L13.8996 6.13374C14.104 6.02961 14.4016 5.88737 14.7921 5.70687C15.1827 5.52626 15.5606 5.36662 15.9256 5.22784C16.0789 5.17236 16.1956 5.08902 16.2759 4.97797L16.3089 4.92586C16.338 4.8912 16.369 4.83558 16.402 4.75928C16.4349 4.68288 16.4586 4.60314 16.4731 4.51977L16.4513 1.66657C16.4513 1.37501 16.3818 1.17718 16.2431 1.07302L16.1775 1.03133C16.1409 1.0105 16.0826 1 16.0022 1C15.9219 1 15.8233 1.02083 15.7066 1.06251C14.6771 1.47903 13.6843 1.93198 12.728 2.42137C11.7716 2.91076 11.0012 3.33602 10.4175 3.69691C9.83341 4.05788 9.28212 4.42582 8.76402 4.80072C8.24558 5.17561 7.91343 5.42377 7.76745 5.54519C7.62125 5.66675 7.51191 5.76223 7.43897 5.83163L7.17619 6.09202C7.00093 6.25862 6.79104 6.50327 6.54652 6.8261C6.30188 7.14899 6.06104 7.50645 5.82353 7.89868C5.58647 8.29096 5.39306 8.74736 5.24341 9.26806C5.09365 9.78872 5.03352 10.2955 5.06247 10.7884V11.986C5.08463 12.2288 5.1648 12.4128 5.30343 12.5378L5.35832 12.5792C5.40197 12.6072 5.46956 12.6332 5.56075 12.6573C5.65195 12.6816 5.75249 12.6937 5.86184 12.6937C6.17573 12.6866 6.45866 12.7094 6.71042 12.7614C6.96218 12.8132 7.15203 12.8723 7.27986 12.9385C7.40757 13.0047 7.51536 13.0792 7.60277 13.1623C7.69029 13.2456 7.74329 13.3049 7.76155 13.3397C7.77992 13.3742 7.79239 13.4018 7.79996 13.4227C7.85831 13.5893 7.80175 13.7853 7.63005 14.0112C7.45846 14.2368 7.24667 14.4486 6.99492 14.6465C6.74293 14.8444 6.46011 15.0821 6.14633 15.3596C5.83233 15.6375 5.59894 15.8804 5.44539 16.0885L5.314 16.2968C5.22637 16.4359 5.14598 16.6163 5.07305 16.8386C5 17.0604 4.98174 17.2547 5.01826 17.4214L5.06202 20.0871C5.06202 20.3509 5.1079 20.556 5.19898 20.7014C5.29028 20.8473 5.39083 20.934 5.50007 20.9618C5.60952 20.9898 5.73378 20.9912 5.87264 20.9671C6.01115 20.9424 6.10803 20.9181 6.1627 20.8939Z" fill="white"/>
                                             </g>
                                         </svg>
-                                    </a>
-                                    <a href="#">
-                                        <svg
-                                            width="22"
-                                            height="22"
-                                            viewBox="0 0 22 22"
-                                            fill="none"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                        >
+                                </a>
+                                <a href="#">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <g opacity="0.8">
                                                 <path d="M19.9965 14.845L20 12.6404C20 10.1637 18.3579 8.56318 15.8163 8.56318H13.8873V6.34664C13.8873 6.1551 13.732 6 13.5405 6H10.7456C10.554 6 10.399 6.15528 10.399 6.34664V8.56318H3.3466C3.1551 8.56318 3 8.71829 3 8.90982V11.8018C3 11.9933 3.1553 12.1484 3.3466 12.1484H10.399V14.7401C10.399 14.9316 10.554 15.0867 10.7456 15.0867L13.5405 15.0878C13.6325 15.0878 13.7205 15.0512 13.7856 14.9863C13.8507 14.9214 13.8873 14.8329 13.8873 14.741V12.1484H15.5225C16.3085 12.1484 16.7075 12.3357 16.7075 13.3595L16.708 14.8446C16.708 15.036 16.8633 15.1911 17.0546 15.1911H19.6498C19.841 15.1911 19.9961 15.0361 19.9965 14.845Z" fill="white"/>
                                             </g>
                                         </svg>
-                                    </a>
-                                    <a href="#">
-                                        <svg
-                                            width="22"
-                                            height="22"
-                                            viewBox="0 0 22 22"
-                                            fill="none"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                        >
+                                </a>
+                                <a href="#">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <g opacity="0.8">
                                                 <path d="M16.7124 20.2204C17.6269 19.4985 18 18.1656 18 15.6201V6.37975C18 3.77594 17.6029 2.42045 16.6292 1.70123C15.6798 1 14.281 1 12.345 1H8.655C4.9043 1 3 1.832 3 6.37975V15.6201C3 17.8276 3.3291 19.0508 4.1363 19.8422C4.964 20.6538 6.3153 21 8.655 21H12.345C14.3867 21 15.7937 20.9458 16.7124 20.2204ZM9.9905 13.8401L7.6535 9.64406C7.6012 9.55026 7.5753 9.44767 7.5753 9.34522C7.5753 9.22922 7.6086 9.11348 7.6747 9.01097C7.7994 8.81794 8.0223 8.70006 8.2629 8.70006H12.922C13.1621 8.70006 13.3848 8.81761 13.5096 9.01026C13.6343 9.20297 13.6428 9.44264 13.5321 9.64258L11.2101 13.8386C11.092 14.0521 10.8571 14.1861 10.6009 14.1864C10.3444 14.1867 10.1092 14.0533 9.9905 13.8401Z" fill="white"/>
                                             </g>
                                         </svg>
-                                    </a>
-                                </div>
-                                <hr>
-                                <p>мы в социальных сетях</p>
+                                </a>
                             </div>
+                            <hr>
+                            <p>мы в социальных сетях</p>
                         </div>
                     </div>
                 </div>
-            </section>
-            <section class="partners-carousel">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 col-lg-4 partners-carousel__left-side">
-                            <p>Бизнес центр Downtown - аренда стильных и комфортных офисов</p>
-                        </div>
-                        <div class="col-12 col-lg-8 partners-carousel__right-side">
-                            <p>
-                                Это текст о компании. Он необходим для дальнейшего продвижения Вашего сайта. Вам будет необходимо предоставить исходные данные, по которым наши копирайтеры текст. Это текст о компании. Он необходим для дальнейшего продвижения Вашего сайта. Вам будет необходимо
+            </div>
+        </section>
+        <section class="partners-carousel">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-4 partners-carousel__left-side">
+                        <p>Бизнес центр Downtown - аренда стильных и комфортных офисов</p>
+                    </div>
+                    <div class="col-12 col-lg-8 partners-carousel__right-side">
+                        <p>
+                            Это текст о компании. Он необходим для дальнейшего продвижения Вашего сайта. Вам будет необходимо предоставить исходные данные, по которым наши копирайтеры текст. Это текст о компании. Он необходим для дальнейшего продвижения Вашего сайта. Вам будет необходимо
                             предоставить исходные данные, по которым наши копирайтеры текст.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="partners-carousel__slider owl-carousel owl-theme">
-                        <div class="item">
-                            <a href="#1">
-                                <img src="img/carousel/carousel_logo_1.png" alt="logo 1">
-                            </a>
-                        </div>
-                        <div class="item">
-                            <a href="#2">
-                                <img src="img/carousel/carousel_logo_2.png" alt="logo 2">
-                            </a>
-                        </div>
-                        <div class="item">
-                            <a href="#3">
-                                <img src="img/carousel/carousel_logo_3.png" alt="logo 3">
-                            </a>
-                        </div>
-                        <div class="item">
-                            <a href="#4">
-                                <img src="img/carousel/carousel_logo_4.png" alt="logo 4">
-                            </a>
-                        </div>
-                        <div class="item">
-                            <a href="#5">
-                                <img src="img/carousel/carousel_logo_5.png" alt="logo 5">
-                            </a>
-                        </div>
-                        <div class="item">
-                            <a href="#6">
-                                <img src="img/carousel/carousel_logo_6.png" alt="logo 6">
-                            </a>
-                        </div>
+                        </p>
                     </div>
                 </div>
-            </section>
-            <section class="advantages">
-                <div class="container advantages__container position-relative">
-                    <h3>Наши преимущества</h3>
-                    <h2>За что выбирают нас</h2>
-                    <div class="row advantages__content position-relative">
-                        <div class="col-12 col-lg-4">
-                            <div class="advantages__content__left-side">
-                                <a href="#" data-slide="0" class="active">
+                <div class="partners-carousel__slider owl-carousel owl-theme">
+                    <div class="item">
+                        <a href="#1">
+                            <img src="img/carousel/carousel_logo_1.png" alt="logo 1">
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="#2">
+                            <img src="img/carousel/carousel_logo_2.png" alt="logo 2">
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="#3">
+                            <img src="img/carousel/carousel_logo_3.png" alt="logo 3">
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="#4">
+                            <img src="img/carousel/carousel_logo_4.png" alt="logo 4">
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="#5">
+                            <img src="img/carousel/carousel_logo_5.png" alt="logo 5">
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="#6">
+                            <img src="img/carousel/carousel_logo_6.png" alt="logo 6">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="advantages">
+            <div class="container advantages__container position-relative">
+                <h3>Наши преимущества</h3>
+                <h2>За что выбирают нас</h2>
+                <div class="row advantages__content position-relative">
+                    <div class="col-12 col-lg-4">
+                        <div class="advantages__content__left-side">
+                            <a href="#" data-slide="0" class="active">
                                     Статус
                                     <svg
                                         class="arrow"
@@ -375,7 +296,7 @@
                                         </g>
                                     </svg>
                                 </a>
-                                <a href="#" data-slide="1">
+                            <a href="#" data-slide="1">
                                     Парковка
                                     <svg
                                         class="arrow"
@@ -391,7 +312,7 @@
                                         </g>
                                     </svg>
                                 </a>
-                                <a href="#" data-slide="2">
+                            <a href="#" data-slide="2">
                                     Локация
                                     <svg
                                         class="arrow"
@@ -407,7 +328,7 @@
                                         </g>
                                     </svg>
                                 </a>
-                                <a href="#" data-slide="3">
+                            <a href="#" data-slide="3">
                                     Сервис
                                     <svg
                                         class="arrow"
@@ -423,7 +344,7 @@
                                         </g>
                                     </svg>
                                 </a>
-                                <a href="#" data-slide="4">
+                            <a href="#" data-slide="4">
                                     Безопасность
                                     <svg
                                         class="arrow"
@@ -439,7 +360,7 @@
                                         </g>
                                     </svg>
                                 </a>
-                                <a href="#" data-slide="5">
+                            <a href="#" data-slide="5">
                                     Стандарт качества
                                     <svg
                                         class="arrow"
@@ -455,373 +376,524 @@
                                         </g>
                                     </svg>
                                 </a>
+                        </div>
+                    </div>
+                    <div class="advantages__content__bar" id="advantages__content__bar"></div>
+                    <div class="col-12 col-lg-8 p-lg-0">
+                        <div class="advantages__content__right-side position-relative h-100">
+                            <div class="adv-slider h-100">
+                                <div class="adv-slide h-100 active">
+                                    <img src="img/advantages_slide.png" alt="advantages slide">
+                                    <div class="adv-slide__text">
+                                        <p>Инженерное оснащение здания выполнено в соответствии с самыми высокими мировыми стандартами.</p>
+                                    </div>
+                                    <span></span>
+                                </div>
+                                <div class="adv-slide h-100">
+                                    <img src="img/advantages_slide.png" alt="advantages slide">
+                                    <div class="adv-slide__text">
+                                        <p>Инженерное оснащение здания выполнено в соответствии с самыми высокими мировыми стандартами.</p>
+                                    </div>
+                                    <span></span>
+                                </div>
+                                <div class="adv-slide h-100">
+                                    <img src="img/advantages_slide.png" alt="advantages slide">
+                                    <div class="adv-slide__text">
+                                        <p>Инженерное оснащение здания выполнено в соответствии с самыми высокими мировыми стандартами.</p>
+                                    </div>
+                                    <span></span>
+                                </div>
+                                <div class="adv-slide h-100">
+                                    <img src="img/advantages_slide.png" alt="advantages slide">
+                                    <div class="adv-slide__text">
+                                        <p>Инженерное оснащение здания выполнено в соответствии с самыми высокими мировыми стандартами.</p>
+                                    </div>
+                                    <span></span>
+                                </div>
+                                <div class="adv-slide h-100">
+                                    <img src="img/advantages_slide.png" alt="advantages slide">
+                                    <div class="adv-slide__text">
+                                        <p>Инженерное оснащение здания выполнено в соответствии с самыми высокими мировыми стандартами.</p>
+                                    </div>
+                                    <span></span>
+                                </div>
+                                <div class="adv-slide h-100">
+                                    <img src="img/advantages_slide.png" alt="advantages slide">
+                                    <div class="adv-slide__text">
+                                        <p>Инженерное оснащение здания выполнено в соответствии с самыми высокими мировыми стандартами.</p>
+                                    </div>
+                                    <span></span>
+                                </div>
                             </div>
                         </div>
-                        <div class="advantages__content__bar" id="advantages__content__bar"></div>
-                        <div class="col-12 col-lg-8 p-lg-0">
-                            <div class="advantages__content__right-side position-relative h-100">
-                                <div class="adv-slider h-100">
-                                    <div class="adv-slide h-100 active">
-                                        <img src="img/advantages_slide.png" alt="advantages slide">
-                                        <div class="adv-slide__text">
-                                            <p>Инженерное оснащение здания выполнено в соответствии с самыми высокими мировыми стандартами.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="objects">
+            <div class="container">
+                <h3>Объекты</h3>
+                <h2>Свободные офисы</h2>
+                <div class="row obj__content position-relative">
+                    <div class="col-12 col-lg-3">
+                        <div class="obj__content__left-side">
+                            <div class="obj__left-side__free">
+                                <a href="#" class="active">DUBAI</a>
+                                <a href="#">BOSTON</a>
+                                <a href="#">GENEVA</a>
+                                <a href="#">MANHATTAN</a>
+                                <a href="#">TOKYO</a>
+                            </div>
+                            <div class="obj__left-side__conf">
+                                <a href="#">Конференц зал</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-9">
+                        <div class="obj__content__right-side">
+                            <div class="obj__content__right-side position-relative h-100">
+                                <div class="obj-slider h-100">
+                                    <div class="obj-slide row h-100 active">
+                                        <div class="col-12 col-lg-5">
+                                            <img src="img/objects-image-1.png" alt="objects slide image 1">
                                         </div>
-                                        <span></span>
+                                        <div class="col-12 col-lg-7 position-relative">
+                                            <img src="img/objects-image-2.png" alt="">
+                                            <div class="obj-slide__text">
+                                                <div class="obj-slide__text__content">
+                                                    <ul>
+                                                        <li>
+                                                            <img src="img/icons/square.png" width="24px" alt="square"> 329 кв.м 1
+                                                        </li>
+                                                        <li>
+                                                            <img src="img/icons/floor.png" width="24px" alt="floor"> 10 этажей
+                                                        </li>
+                                                        <li>
+                                                            <img src="img/icons/user.png" width="24px" alt="user"> 120 тыс. рабочих мест
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="adv-slide h-100">
-                                        <img src="img/advantages_slide.png" alt="advantages slide">
-                                        <div class="adv-slide__text">
-                                            <p>Инженерное оснащение здания выполнено в соответствии с самыми высокими мировыми стандартами.</p>
+                                    <div class="obj-slide row h-100">
+                                        <div class="col-12 col-lg-5">
+                                            <img src="img/objects-image-1.png" alt="objects slide image 1">
                                         </div>
-                                        <span></span>
+                                        <div class="col-12 col-lg-7 position-relative">
+                                            <img src="img/objects-image-2.png" alt="">
+                                            <div class="obj-slide__text">
+                                                <div class="obj-slide__text__content">
+                                                    <ul>
+                                                        <li>
+                                                            <img src="img/icons/square.png" width="24px" alt="square"> 329 кв.м 2
+                                                        </li>
+                                                        <li>
+                                                            <img src="img/icons/floor.png" width="24px" alt="floor"> 10 этажей
+                                                        </li>
+                                                        <li>
+                                                            <img src="img/icons/user.png" width="24px" alt="user"> 120 тыс. рабочих мест
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="adv-slide h-100">
-                                        <img src="img/advantages_slide.png" alt="advantages slide">
-                                        <div class="adv-slide__text">
-                                            <p>Инженерное оснащение здания выполнено в соответствии с самыми высокими мировыми стандартами.</p>
+                                    <div class="obj-slide row h-100">
+                                        <div class="col-12 col-lg-5">
+                                            <img src="img/objects-image-1.png" alt="objects slide image 1">
                                         </div>
-                                        <span></span>
+                                        <div class="col-12 col-lg-7 position-relative">
+                                            <img src="img/objects-image-2.png" alt="">
+                                            <div class="obj-slide__text">
+                                                <div class="obj-slide__text__content">
+                                                    <ul>
+                                                        <li>
+                                                            <img src="img/icons/square.png" width="24px" alt="square"> 329 кв.м 3
+                                                        </li>
+                                                        <li>
+                                                            <img src="img/icons/floor.png" width="24px" alt="floor"> 10 этажей
+                                                        </li>
+                                                        <li>
+                                                            <img src="img/icons/user.png" width="24px" alt="user"> 120 тыс. рабочих мест
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="adv-slide h-100">
-                                        <img src="img/advantages_slide.png" alt="advantages slide">
-                                        <div class="adv-slide__text">
-                                            <p>Инженерное оснащение здания выполнено в соответствии с самыми высокими мировыми стандартами.</p>
+                                    <div class="obj-slide row h-100">
+                                        <div class="col-12 col-lg-5">
+                                            <img src="img/objects-image-1.png" alt="objects slide image 1">
                                         </div>
-                                        <span></span>
+                                        <div class="col-12 col-lg-7 position-relative">
+                                            <img src="img/objects-image-2.png" alt="">
+                                            <div class="obj-slide__text">
+                                                <div class="obj-slide__text__content">
+                                                    <ul>
+                                                        <li>
+                                                            <img src="img/icons/square.png" width="24px" alt="square"> 329 кв.м 4
+                                                        </li>
+                                                        <li>
+                                                            <img src="img/icons/floor.png" width="24px" alt="floor"> 10 этажей
+                                                        </li>
+                                                        <li>
+                                                            <img src="img/icons/user.png" width="24px" alt="user"> 120 тыс. рабочих мест
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="adv-slide h-100">
-                                        <img src="img/advantages_slide.png" alt="advantages slide">
-                                        <div class="adv-slide__text">
-                                            <p>Инженерное оснащение здания выполнено в соответствии с самыми высокими мировыми стандартами.</p>
+                                    <div class="obj-slide row h-100">
+                                        <div class="col-12 col-lg-5">
+                                            <img src="img/objects-image-1.png" alt="objects slide image 1">
                                         </div>
-                                        <span></span>
+                                        <div class="col-12 col-lg-7 position-relative">
+                                            <img src="img/objects-image-2.png" alt="">
+                                            <div class="obj-slide__text">
+                                                <div class="obj-slide__text__content">
+                                                    <ul>
+                                                        <li>
+                                                            <img src="img/icons/square.png" width="24px" alt="square"> 329 кв.м 5
+                                                        </li>
+                                                        <li>
+                                                            <img src="img/icons/floor.png" width="24px" alt="floor"> 10 этажей
+                                                        </li>
+                                                        <li>
+                                                            <img src="img/icons/user.png" width="24px" alt="user"> 120 тыс. рабочих мест
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="adv-slide h-100">
-                                        <img src="img/advantages_slide.png" alt="advantages slide">
-                                        <div class="adv-slide__text">
-                                            <p>Инженерное оснащение здания выполнено в соответствии с самыми высокими мировыми стандартами.</p>
+                                    <div class="obj-slide row h-100">
+                                        <div class="col-12 col-lg-5">
+                                            <img src="img/objects-image-1.png" alt="objects slide image 1">
                                         </div>
+                                        <div class="col-12 col-lg-7 position-relative">
+                                            <img src="img/objects-image-2.png" alt="">
+                                            <div class="obj-slide__text">
+                                                <div class="obj-slide__text__content">
+                                                    <ul>
+                                                        <li>
+                                                            <img src="img/icons/square.png" width="24px" alt="square"> 329 кв.м 6
+                                                        </li>
+                                                        <li>
+                                                            <img src="img/icons/floor.png" width="24px" alt="floor"> 10 этажей
+                                                        </li>
+                                                        <li>
+                                                            <img src="img/icons/user.png" width="24px" alt="user"> 120 тыс. рабочих мест
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="obj-button">Оставить заявку</a>
+                    <div class="obj-slider__arrows">
+                        <a href="#">
+                            <svg class="arrow" width="16" height="7" viewBox="0 0 16 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_164_128)">
+                                        <path d="M0 3.5H15M15 3.5L12 0.5M15 3.5L12 6.5" stroke="#000"></path>
+                                        <path d="M0 3.5H15M15 3.5L12 0.5M15 3.5L12 6.5" stroke="#000" stroke-width="1.2"></path>
+                                    </g>
+                                </svg>
+                        </a>
+                        <a href="#">
+                            <svg class="arrow" width="16" height="7" viewBox="0 0 16 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_164_128)">
+                                        <path d="M0 3.5H15M15 3.5L12 0.5M15 3.5L12 6.5" stroke="#000"></path>
+                                        <path d="M0 3.5H15M15 3.5L12 0.5M15 3.5L12 6.5" stroke="#000" stroke-width="1.2"></path>
+                                    </g>
+                                </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="conditions">
+            <div class="container">
+                <h3>Условия</h3>
+                <h2>Что входит в аренду офиса</h2>
+                <div class="row conditions__cards-list">
+                    <div class="col-12 col-lg-4 conditions__cards-item">
+                        <div class="conditions__cards-item__content">
+                            <div class="flip-card" tabindex="0" aria-pressed="false">
+                                <div class="flip-card__inner">
+                                    <!-- FRONT -->
+                                    <div class="flip-card__face flip-card__front">
+                                        <h5 class="conditions__cards-item__title">Ресепшен</h5>
                                         <span></span>
+                                        <img src="img/conditions_cards/5.png" class="w-100 h-100 position-relative" alt="card one">
+                                    </div>
+                                    <!-- BACK -->
+                                    <div class="flip-card__face flip-card__back">
+                                        <!-- .flip_side текст и стиль задней стороны -->
+                                        <div class="flip-card__back-inner">
+                                            <h5 class="conditions__cards-item__title back-title">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <g style="mix-blend-mode:lighten">
+                                                        <rect width="24" height="24" fill="url(#pattern0_1_199)"/>
+                                                    </g>
+                                                    <defs>
+                                                        <pattern id="pattern0_1_199" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                                            <use xlink:href="#image0_1_199" transform="scale(0.0138889)"/>
+                                                        </pattern>
+                                                        <image id="image0_1_199" width="72" height="72" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAAGZElEQVR4AeybXVrjNhSGQ2AB/ITrwgoKKyisoGUFhRUAK5jOCoasAGYFZVZAugKYFZDeQiDpPdC+Xx6LJo4lS0ZynGfC44NjWdaRXn1Hsuyk3Vr+OQksATnxtFpLQEtAJQRKTi8V9KMAGg6HO7KHh4e9x8fHgyLTeWy9hMnU6YVRkBqmxg8Gg+Onp6cL7BK7xe6fn5//5e9etra2dru6unpTZDqPDZU/u+6Gz3/y+Y8pKhMHjQUEkJ0MhkCo8UM1vt1uX66srJxix9getjPRHu+P2XUHXPAb9hNWuDUKkMKC3pQ6BOQ+gyEQlSAUtrggET+fC5LHSXMHZKAg9aHCgp6VOpICGbc8+0fIXW1sbPSzw5ndXAARPuvYGVDGY4WgULOgwZP8Uba3t7evroJqBQQUgflErymEvlAxjQHs5rbdbW9v91zeawGUA6MZYy5qyYNAud18Wv44OSDgGMU0BkwGYcT+GnNu4YCcxf1/UoMvY4xCqWlgxpUkzK8ZnAVpfGz7Fx0Qillnqv6iGQmntc1G+AraygZnU1hUQFINPXNLbJ8ZBw3d98sGZ1PvaIBQzmnTVWMaTSc6Zy6TT/sPAwKMQuoSpxcqcBGMun7zreeHAAFnB2c9QurY12ET8nU6ndLZy9SzMqAMzg0F/Ywt0uYdXmpUJUATcBo7S6lxRYbi/ypKt6UFA1pkOILA9J5OQYsOR4B4pnSnva8FKQh5anBbuLCagHHnc/c8kd//tQ/q+cSFizYgU+Wp7e+pI48DLwUBR9O51lQeRTY3CxEQFF5qiRcgCr5U5kU32hEfkNZXgPnIgy0ub8YGoNLVe76mpQpifaWxJ3/dQh4zg1mfPdsa5ASksYcL61RPj/uUE3wm2ZjB4gKisnU9tujj62hzc/OQdd1pEjqtVnB4tfhzKojK/kqepBvjQhc/+1pAoli98tlL5DAuICqrG0JZovq2+q+vr4dbW1tnSH8kf8BKeSsRHF5quEtBqXqyBYjvqOZw8qkeabqVaMTbDoExZgXEmJBkcAZEl1e9B6jmvUdRj8adJP5MQ6vurYDo4ejLCso8NyFlKgycuu7S/zE+Q/ZWQBQSVe7AOUE1M49lUZQeukX1Rd1nNvwMZxI9EqyAKDBapTM4V/n6oB49qk05EeRdBh9bAQWXZLnAAUehVeddevBKXk1KCgg454TVjHLkmElAU3qj1aN6JgNEiH4GzsyYI6cKLeD9rs91GTPn+6wZ4tMKiAZUuvOUc+B0ma2kEB1OGXDKQ2vqijgHLy8vcQHRyO8Vq9antwrhZOVJObWHVpWVvOprVRCNDH64RIF9lHdIaBWqL1OPCx5FJNlG1CmugpBkMCDgaNyxViQbmJMQKCk0uC2mPKuCkGRQoYSkvgxZOGPJmdQDQIWXDms1/Hq/i89XzAoISSpMvF+yEZLWr9LK6RzVI/d6XaV9sFkBqSRf8qjHGVp6rk1Zc1EP7dC7MGvYc965OQFxpUJGSuKjddOspXzWDPN8rk3HlH5R01pxTjgBKcxQh9MB57+Sz9pDjD1ab83rUUafujk7DwbOzQlIVzK2yIFVRdl5ZS00AM4rtFqoxzkuFlY4l1gKiB7o08hCFZGumcuqnsFgoB+KLKx6xKoU0DhTu30BjBkQqMfZQ5zXt+lVRO2Geg5jOPUChIpGTNP591XfSJ+BZiqVjT21Lynkn850zqrK42tegFSYHrDj+D3U6CHnvQV59ZxZl9Zt17aFcpWKeANS4TjWi0TdPGpto8FbyTOm+x4Sk70Voez8Zo61Fswr3ZyrtA8CJA8o5wh1vCtJaXlj7NHUnk9OfSw41oVyVefBgBh3RijJuiJn7NkBYt1Tu4FjHRNrA1TmiMHcCq/s2ornk8FRfYIVpItshnrWUc8vtvOx0wn18RtaVB1dOaauUQFRqG4Ma5nagTPzhhb/0beogAivOuD0Jr/0EJ1IrsCogDR4E2K79K5+KGtdv+Xq4Hs4BqPvEOmezPeij+aLCkiV0XgAKP3WfRdF6Z5E9006FWyAHq8DpZi6wZjKRgdkCgbUqNPpXKlh2IoaibrOabRuMHvs7zABMKZHvNekdQWWvLuAlp3VqRhTf7NPBsg4MHs1EmgXNPoEYPri1D6fBcDYPulHpJ0JLHmTzUymTj772gD5VKaJeZaASnplCWgJyELAM3mpoBJQ/wEAAP//cq5tGgAAAAZJREFUAwDfrtGvxfn47AAAAABJRU5ErkJggg=="/>
+                                                    </defs>
+                                                </svg> Ресепшен
+                                            </h5>
+                                            <p class="flip_side">Это текст о компании. Он необходим для дальнейшего продвижения Вашего сайта.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4 conditions__cards-item">
+                        <div class="conditions__cards-item__content">
+                            <div class="flip-card" tabindex="0" aria-pressed="false">
+                                <div class="flip-card__inner">
+                                    <!-- FRONT -->
+                                    <div class="flip-card__face flip-card__front">
+                                        <h5 class="conditions__cards-item__title">Тренажерный зал</h5>
+                                        <span></span>
+                                        <img src="img/conditions_cards/2.png" class="w-100 h-100 position-relative" alt="card one">
+                                    </div>
+                                    <!-- BACK -->
+                                    <div class="flip-card__face flip-card__back">
+                                        <!-- .flip_side текст и стиль задней стороны -->
+                                        <div class="flip-card__back-inner">
+                                            <h5 class="conditions__cards-item__title back-title">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <g style="mix-blend-mode:lighten">
+                                                        <rect width="24" height="24" fill="url(#pattern0_1_199)"/>
+                                                    </g>
+                                                    <defs>
+                                                        <pattern id="pattern0_1_199" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                                            <use xlink:href="#image0_1_199" transform="scale(0.0138889)"/>
+                                                        </pattern>
+                                                        <image id="image0_1_199" width="72" height="72" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAAGZElEQVR4AeybXVrjNhSGQ2AB/ITrwgoKKyisoGUFhRUAK5jOCoasAGYFZVZAugKYFZDeQiDpPdC+Xx6LJo4lS0ZynGfC44NjWdaRXn1Hsuyk3Vr+OQksATnxtFpLQEtAJQRKTi8V9KMAGg6HO7KHh4e9x8fHgyLTeWy9hMnU6YVRkBqmxg8Gg+Onp6cL7BK7xe6fn5//5e9etra2dru6unpTZDqPDZU/u+6Gz3/y+Y8pKhMHjQUEkJ0MhkCo8UM1vt1uX66srJxix9getjPRHu+P2XUHXPAb9hNWuDUKkMKC3pQ6BOQ+gyEQlSAUtrggET+fC5LHSXMHZKAg9aHCgp6VOpICGbc8+0fIXW1sbPSzw5ndXAARPuvYGVDGY4WgULOgwZP8Uba3t7evroJqBQQUgflErymEvlAxjQHs5rbdbW9v91zeawGUA6MZYy5qyYNAud18Wv44OSDgGMU0BkwGYcT+GnNu4YCcxf1/UoMvY4xCqWlgxpUkzK8ZnAVpfGz7Fx0Qillnqv6iGQmntc1G+AraygZnU1hUQFINPXNLbJ8ZBw3d98sGZ1PvaIBQzmnTVWMaTSc6Zy6TT/sPAwKMQuoSpxcqcBGMun7zreeHAAFnB2c9QurY12ET8nU6ndLZy9SzMqAMzg0F/Ywt0uYdXmpUJUATcBo7S6lxRYbi/ypKt6UFA1pkOILA9J5OQYsOR4B4pnSnva8FKQh5anBbuLCagHHnc/c8kd//tQ/q+cSFizYgU+Wp7e+pI48DLwUBR9O51lQeRTY3CxEQFF5qiRcgCr5U5kU32hEfkNZXgPnIgy0ub8YGoNLVe76mpQpifaWxJ3/dQh4zg1mfPdsa5ASksYcL61RPj/uUE3wm2ZjB4gKisnU9tujj62hzc/OQdd1pEjqtVnB4tfhzKojK/kqepBvjQhc/+1pAoli98tlL5DAuICqrG0JZovq2+q+vr4dbW1tnSH8kf8BKeSsRHF5quEtBqXqyBYjvqOZw8qkeabqVaMTbDoExZgXEmJBkcAZEl1e9B6jmvUdRj8adJP5MQ6vurYDo4ejLCso8NyFlKgycuu7S/zE+Q/ZWQBQSVe7AOUE1M49lUZQeukX1Rd1nNvwMZxI9EqyAKDBapTM4V/n6oB49qk05EeRdBh9bAQWXZLnAAUehVeddevBKXk1KCgg454TVjHLkmElAU3qj1aN6JgNEiH4GzsyYI6cKLeD9rs91GTPn+6wZ4tMKiAZUuvOUc+B0ma2kEB1OGXDKQ2vqijgHLy8vcQHRyO8Vq9antwrhZOVJObWHVpWVvOprVRCNDH64RIF9lHdIaBWqL1OPCx5FJNlG1CmugpBkMCDgaNyxViQbmJMQKCk0uC2mPKuCkGRQoYSkvgxZOGPJmdQDQIWXDms1/Hq/i89XzAoISSpMvF+yEZLWr9LK6RzVI/d6XaV9sFkBqSRf8qjHGVp6rk1Zc1EP7dC7MGvYc965OQFxpUJGSuKjddOspXzWDPN8rk3HlH5R01pxTjgBKcxQh9MB57+Sz9pDjD1ab83rUUafujk7DwbOzQlIVzK2yIFVRdl5ZS00AM4rtFqoxzkuFlY4l1gKiB7o08hCFZGumcuqnsFgoB+KLKx6xKoU0DhTu30BjBkQqMfZQ5zXt+lVRO2Geg5jOPUChIpGTNP591XfSJ+BZiqVjT21Lynkn850zqrK42tegFSYHrDj+D3U6CHnvQV59ZxZl9Zt17aFcpWKeANS4TjWi0TdPGpto8FbyTOm+x4Sk70Voez8Zo61Fswr3ZyrtA8CJA8o5wh1vCtJaXlj7NHUnk9OfSw41oVyVefBgBh3RijJuiJn7NkBYt1Tu4FjHRNrA1TmiMHcCq/s2ornk8FRfYIVpItshnrWUc8vtvOx0wn18RtaVB1dOaauUQFRqG4Ma5nagTPzhhb/0beogAivOuD0Jr/0EJ1IrsCogDR4E2K79K5+KGtdv+Xq4Hs4BqPvEOmezPeij+aLCkiV0XgAKP3WfRdF6Z5E9006FWyAHq8DpZi6wZjKRgdkCgbUqNPpXKlh2IoaibrOabRuMHvs7zABMKZHvNekdQWWvLuAlp3VqRhTf7NPBsg4MHs1EmgXNPoEYPri1D6fBcDYPulHpJ0JLHmTzUymTj772gD5VKaJeZaASnplCWgJyELAM3mpoBJQ/wEAAP//cq5tGgAAAAZJREFUAwDfrtGvxfn47AAAAABJRU5ErkJggg=="/>
+                                                    </defs>
+                                                </svg> Тренажерный зал
+                                            </h5>
+                                            <p class="flip_side">Это текст о компании. Он необходим для дальнейшего продвижения Вашего сайта.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4 conditions__cards-item">
+                        <div class="conditions__cards-item__content">
+                            <div class="flip-card" tabindex="0" aria-pressed="false">
+                                <div class="flip-card__inner">
+                                    <!-- FRONT -->
+                                    <div class="flip-card__face flip-card__front">
+                                        <h5 class="conditions__cards-item__title">Охрана</h5>
+                                        <span></span>
+                                        <img src="img/conditions_cards/3.png" class="w-100 h-100 position-relative" alt="card one">
+                                    </div>
+                                    <!-- BACK -->
+                                    <div class="flip-card__face flip-card__back">
+                                        <!-- .flip_side текст и стиль задней стороны -->
+                                        <div class="flip-card__back-inner">
+                                            <h5 class="conditions__cards-item__title back-title">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <g style="mix-blend-mode:lighten">
+                                                        <rect width="24" height="24" fill="url(#pattern0_1_199)"/>
+                                                    </g>
+                                                    <defs>
+                                                        <pattern id="pattern0_1_199" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                                            <use xlink:href="#image0_1_199" transform="scale(0.0138889)"/>
+                                                        </pattern>
+                                                        <image id="image0_1_199" width="72" height="72" preserveAspectRatio="none" xlink:href="data:image/png;base64,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"/>
+                                                    </defs>
+                                                </svg> Охрана
+                                            </h5>
+                                            <p class="flip_side">Это текст о компании. Он необходим для дальнейшего продвижения Вашего сайта.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4 conditions__cards-item">
+                        <div class="conditions__cards-item__content">
+                            <div class="flip-card" tabindex="0" aria-pressed="false">
+                                <div class="flip-card__inner">
+                                    <!-- FRONT -->
+                                    <div class="flip-card__face flip-card__front">
+                                        <h5 class="conditions__cards-item__title">Центр питания</h5>
+                                        <span></span>
+                                        <img src="img/conditions_cards/4.png" class="w-100 h-100 position-relative" alt="card one">
+                                    </div>
+                                    <!-- BACK -->
+                                    <div class="flip-card__face flip-card__back">
+                                        <!-- .flip_side текст и стиль задней стороны -->
+                                        <div class="flip-card__back-inner">
+                                            <h5 class="conditions__cards-item__title back-title">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <g style="mix-blend-mode:lighten">
+                                                        <rect width="24" height="24" fill="url(#pattern0_1_199)"/>
+                                                    </g>
+                                                    <defs>
+                                                        <pattern id="pattern0_1_199" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                                            <use xlink:href="#image0_1_199" transform="scale(0.0138889)"/>
+                                                        </pattern>
+                                                        <image id="image0_1_199" width="72" height="72" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAAGZElEQVR4AeybXVrjNhSGQ2AB/ITrwgoKKyisoGUFhRUAK5jOCoasAGYFZVZAugKYFZDeQiDpPdC+Xx6LJo4lS0ZynGfC44NjWdaRXn1Hsuyk3Vr+OQksATnxtFpLQEtAJQRKTi8V9KMAGg6HO7KHh4e9x8fHgyLTeWy9hMnU6YVRkBqmxg8Gg+Onp6cL7BK7xe6fn5//5e9etra2dru6unpTZDqPDZU/u+6Gz3/y+Y8pKhMHjQUEkJ0MhkCo8UM1vt1uX66srJxix9getjPRHu+P2XUHXPAb9hNWuDUKkMKC3pQ6BOQ+gyEQlSAUtrggET+fC5LHSXMHZKAg9aHCgp6VOpICGbc8+0fIXW1sbPSzw5ndXAARPuvYGVDGY4WgULOgwZP8Uba3t7evroJqBQQUgflErymEvlAxjQHs5rbdbW9v91zeawGUA6MZYy5qyYNAud18Wv44OSDgGMU0BkwGYcT+GnNu4YCcxf1/UoMvY4xCqWlgxpUkzK8ZnAVpfGz7Fx0Qillnqv6iGQmntc1G+AraygZnU1hUQFINPXNLbJ8ZBw3d98sGZ1PvaIBQzmnTVWMaTSc6Zy6TT/sPAwKMQuoSpxcqcBGMun7zreeHAAFnB2c9QurY12ET8nU6ndLZy9SzMqAMzg0F/Ywt0uYdXmpUJUATcBo7S6lxRYbi/ypKt6UFA1pkOILA9J5OQYsOR4B4pnSnva8FKQh5anBbuLCagHHnc/c8kd//tQ/q+cSFizYgU+Wp7e+pI48DLwUBR9O51lQeRTY3CxEQFF5qiRcgCr5U5kU32hEfkNZXgPnIgy0ub8YGoNLVe76mpQpifaWxJ3/dQh4zg1mfPdsa5ASksYcL61RPj/uUE3wm2ZjB4gKisnU9tujj62hzc/OQdd1pEjqtVnB4tfhzKojK/kqepBvjQhc/+1pAoli98tlL5DAuICqrG0JZovq2+q+vr4dbW1tnSH8kf8BKeSsRHF5quEtBqXqyBYjvqOZw8qkeabqVaMTbDoExZgXEmJBkcAZEl1e9B6jmvUdRj8adJP5MQ6vurYDo4ejLCso8NyFlKgycuu7S/zE+Q/ZWQBQSVe7AOUE1M49lUZQeukX1Rd1nNvwMZxI9EqyAKDBapTM4V/n6oB49qk05EeRdBh9bAQWXZLnAAUehVeddevBKXk1KCgg454TVjHLkmElAU3qj1aN6JgNEiH4GzsyYI6cKLeD9rs91GTPn+6wZ4tMKiAZUuvOUc+B0ma2kEB1OGXDKQ2vqijgHLy8vcQHRyO8Vq9antwrhZOVJObWHVpWVvOprVRCNDH64RIF9lHdIaBWqL1OPCx5FJNlG1CmugpBkMCDgaNyxViQbmJMQKCk0uC2mPKuCkGRQoYSkvgxZOGPJmdQDQIWXDms1/Hq/i89XzAoISSpMvF+yEZLWr9LK6RzVI/d6XaV9sFkBqSRf8qjHGVp6rk1Zc1EP7dC7MGvYc965OQFxpUJGSuKjddOspXzWDPN8rk3HlH5R01pxTjgBKcxQh9MB57+Sz9pDjD1ab83rUUafujk7DwbOzQlIVzK2yIFVRdl5ZS00AM4rtFqoxzkuFlY4l1gKiB7o08hCFZGumcuqnsFgoB+KLKx6xKoU0DhTu30BjBkQqMfZQ5zXt+lVRO2Geg5jOPUChIpGTNP591XfSJ+BZiqVjT21Lynkn850zqrK42tegFSYHrDj+D3U6CHnvQV59ZxZl9Zt17aFcpWKeANS4TjWi0TdPGpto8FbyTOm+x4Sk70Voez8Zo61Fswr3ZyrtA8CJA8o5wh1vCtJaXlj7NHUnk9OfSw41oVyVefBgBh3RijJuiJn7NkBYt1Tu4FjHRNrA1TmiMHcCq/s2ornk8FRfYIVpItshnrWUc8vtvOx0wn18RtaVB1dOaauUQFRqG4Ma5nagTPzhhb/0beogAivOuD0Jr/0EJ1IrsCogDR4E2K79K5+KGtdv+Xq4Hs4BqPvEOmezPeij+aLCkiV0XgAKP3WfRdF6Z5E9006FWyAHq8DpZi6wZjKRgdkCgbUqNPpXKlh2IoaibrOabRuMHvs7zABMKZHvNekdQWWvLuAlp3VqRhTf7NPBsg4MHs1EmgXNPoEYPri1D6fBcDYPulHpJ0JLHmTzUymTj772gD5VKaJeZaASnplCWgJyELAM3mpoBJQ/wEAAP//cq5tGgAAAAZJREFUAwDfrtGvxfn47AAAAABJRU5ErkJggg=="/>
+                                                    </defs>
+                                                </svg> Центр питания
+                                            </h5>
+                                            <p class="flip_side">Это текст о компании. Он необходим для дальнейшего продвижения Вашего сайта.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4 conditions__cards-item">
+                        <div class="conditions__cards-item__content">
+                            <div class="flip-card" tabindex="0" aria-pressed="false">
+                                <div class="flip-card__inner">
+                                    <!-- FRONT -->
+                                    <div class="flip-card__face flip-card__front">
+                                        <h5 class="conditions__cards-item__title">Ком. услуги</h5>
+                                        <span></span>
+                                        <img src="img/conditions_cards/5.png" class="w-100 h-100 position-relative" alt="card one">
+                                    </div>
+                                    <!-- BACK -->
+                                    <div class="flip-card__face flip-card__back">
+                                        <!-- .flip_side текст и стиль задней стороны -->
+                                        <div class="flip-card__back-inner">
+                                            <h5 class="conditions__cards-item__title back-title">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <g style="mix-blend-mode:lighten">
+                                                        <rect width="24" height="24" fill="url(#pattern0_1_199)"/>
+                                                    </g>
+                                                    <defs>
+                                                        <pattern id="pattern0_1_199" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                                            <use xlink:href="#image0_1_199" transform="scale(0.0138889)"/>
+                                                        </pattern>
+                                                        <image id="image0_1_199" width="72" height="72" preserveAspectRatio="none" xlink:href="data:image/png;base64,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"/>
+                                                    </defs>
+                                                </svg> Ком. услуги
+                                            </h5>
+                                            <p class="flip_side">Это текст о компании. Он необходим для дальнейшего продвижения Вашего сайта.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4 conditions__cards-item">
+                        <div class="conditions__cards-item__content">
+                            <div class="flip-card" tabindex="0" aria-pressed="false">
+                                <div class="flip-card__inner">
+                                    <!-- FRONT -->
+                                    <div class="flip-card__face flip-card__front">
+                                        <h5 class="conditions__cards-item__title">Кондиционирование</h5>
+                                        <span></span>
+                                        <img src="img/conditions_cards/6.png" class="w-100 h-100 position-relative" alt="card one">
+                                    </div>
+                                    <!-- BACK -->
+                                    <div class="flip-card__face flip-card__back">
+                                        <!-- .flip_side текст и стиль задней стороны -->
+                                        <div class="flip-card__back-inner">
+                                            <h5 class="conditions__cards-item__title back-title">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <g style="mix-blend-mode:lighten">
+                                                        <rect width="24" height="24" fill="url(#pattern0_1_199)"/>
+                                                    </g>
+                                                    <defs>
+                                                        <pattern id="pattern0_1_199" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                                            <use xlink:href="#image0_1_199" transform="scale(0.0138889)"/>
+                                                        </pattern>
+                                                        <image id="image0_1_199" width="72" height="72" preserveAspectRatio="none" xlink:href="data:image/png;base64,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"/>
+                                                    </defs>
+                                                </svg> Кондиционирование
+                                            </h5>
+                                            <p class="flip_side">Это текст о компании. Он необходим для дальнейшего продвижения Вашего сайта.</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
-            <section class="objects">
-                <div class="container">
-                    <h3>Объекты</h3>
-                    <h2>Свободные офисы</h2>
-                    <div class="row obj__content position-relative">
-                        <div class="col-12 col-lg-3">
-                            <div class="obj__content__left-side">
-                                <div class="obj__left-side__free">
-                                    <a href="#" class="active">DUBAI</a>
-                                    <a href="#">BOSTON</a>
-                                    <a href="#">GENEVA</a>
-                                    <a href="#">MANHATTAN</a>
-                                    <a href="#">TOKYO</a>
-                                </div>
-                                <div class="obj__left-side__conf">
-                                    <a href="#">Конференц зал</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-lg-9">
-                            <div class="obj__content__right-side">
-                                <div class="obj__content__right-side position-relative h-100">
-                                    <div class="obj-slider h-100">
-                                        <div class="obj-slide row h-100 active">
-                                            <div class="col-12 col-lg-5">
-                                                <img src="img/objects-image-1.png" alt="objects slide image 1">
-                                            </div>
-                                            <div class="col-12 col-lg-7 position-relative">
-                                                <img src="img/objects-image-2.png" alt="">
-                                                <div class="obj-slide__text">
-                                                    <div class="obj-slide__text__content">
-                                                        <ul>
-                                                            <li>
-                                                                <img src="img/icons/square.png" width="24px" alt="square">
-                                                                329 кв.м 1
-                                                            </li>
-                                                            <li>
-                                                                <img src="img/icons/floor.png" width="24px" alt="floor">
-                                                                10 этажей
-                                                            </li>
-                                                            <li>
-                                                                <img src="img/icons/user.png" width="24px" alt="user">
-                                                                120 тыс. рабочих мест
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="obj-slide row h-100">
-                                            <div class="col-12 col-lg-5">
-                                                <img src="img/objects-image-1.png" alt="objects slide image 1">
-                                            </div>
-                                            <div class="col-12 col-lg-7 position-relative">
-                                                <img src="img/objects-image-2.png" alt="">
-                                                <div class="obj-slide__text">
-                                                    <div class="obj-slide__text__content">
-                                                        <ul>
-                                                            <li>
-                                                                <img src="img/icons/square.png" width="24px" alt="square">
-                                                                329 кв.м 2
-                                                            </li>
-                                                            <li>
-                                                                <img src="img/icons/floor.png" width="24px" alt="floor">
-                                                                10 этажей
-                                                            </li>
-                                                            <li>
-                                                                <img src="img/icons/user.png" width="24px" alt="user">
-                                                                120 тыс. рабочих мест
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="obj-slide row h-100">
-                                            <div class="col-12 col-lg-5">
-                                                <img src="img/objects-image-1.png" alt="objects slide image 1">
-                                            </div>
-                                            <div class="col-12 col-lg-7 position-relative">
-                                                <img src="img/objects-image-2.png" alt="">
-                                                <div class="obj-slide__text">
-                                                    <div class="obj-slide__text__content">
-                                                        <ul>
-                                                            <li>
-                                                                <img src="img/icons/square.png" width="24px" alt="square">
-                                                                329 кв.м 3
-                                                            </li>
-                                                            <li>
-                                                                <img src="img/icons/floor.png" width="24px" alt="floor">
-                                                                10 этажей
-                                                            </li>
-                                                            <li>
-                                                                <img src="img/icons/user.png" width="24px" alt="user">
-                                                                120 тыс. рабочих мест
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="obj-slide row h-100">
-                                            <div class="col-12 col-lg-5">
-                                                <img src="img/objects-image-1.png" alt="objects slide image 1">
-                                            </div>
-                                            <div class="col-12 col-lg-7 position-relative">
-                                                <img src="img/objects-image-2.png" alt="">
-                                                <div class="obj-slide__text">
-                                                    <div class="obj-slide__text__content">
-                                                        <ul>
-                                                            <li>
-                                                                <img src="img/icons/square.png" width="24px" alt="square">
-                                                                329 кв.м 4
-                                                            </li>
-                                                            <li>
-                                                                <img src="img/icons/floor.png" width="24px" alt="floor">
-                                                                10 этажей
-                                                            </li>
-                                                            <li>
-                                                                <img src="img/icons/user.png" width="24px" alt="user">
-                                                                120 тыс. рабочих мест
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="obj-slide row h-100">
-                                            <div class="col-12 col-lg-5">
-                                                <img src="img/objects-image-1.png" alt="objects slide image 1">
-                                            </div>
-                                            <div class="col-12 col-lg-7 position-relative">
-                                                <img src="img/objects-image-2.png" alt="">
-                                                <div class="obj-slide__text">
-                                                    <div class="obj-slide__text__content">
-                                                        <ul>
-                                                            <li>
-                                                                <img src="img/icons/square.png" width="24px" alt="square">
-                                                                329 кв.м 5
-                                                            </li>
-                                                            <li>
-                                                                <img src="img/icons/floor.png" width="24px" alt="floor">
-                                                                10 этажей
-                                                            </li>
-                                                            <li>
-                                                                <img src="img/icons/user.png" width="24px" alt="user">
-                                                                120 тыс. рабочих мест
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="obj-slide row h-100">
-                                            <div class="col-12 col-lg-5">
-                                                <img src="img/objects-image-1.png" alt="objects slide image 1">
-                                            </div>
-                                            <div class="col-12 col-lg-7 position-relative">
-                                                <img src="img/objects-image-2.png" alt="">
-                                                <div class="obj-slide__text">
-                                                    <div class="obj-slide__text__content">
-                                                        <ul>
-                                                            <li>
-                                                                <img src="img/icons/square.png" width="24px" alt="square">
-                                                                329 кв.м 6
-                                                            </li>
-                                                            <li>
-                                                                <img src="img/icons/floor.png" width="24px" alt="floor">
-                                                                10 этажей
-                                                            </li>
-                                                            <li>
-                                                                <img src="img/icons/user.png" width="24px" alt="user">
-                                                                120 тыс. рабочих мест
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <a href="#" class="obj-button">Оставить заявку</a>
-                        <div class="obj-slider__arrows">
-                            <a href="#">
-                                <svg
-                                    class="arrow"
-                                    width="16"
-                                    height="7"
-                                    viewBox="0 0 16 7"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <g clip-path="url(#clip0_164_128)">
-                                        <path d="M0 3.5H15M15 3.5L12 0.5M15 3.5L12 6.5" stroke="#000"></path>
-                                        <path d="M0 3.5H15M15 3.5L12 0.5M15 3.5L12 6.5" stroke="#000" stroke-width="1.2"></path>
-                                    </g>
-                                </svg>
-                            </a>
-                            <a href="#">
-                                <svg
-                                    class="arrow"
-                                    width="16"
-                                    height="7"
-                                    viewBox="0 0 16 7"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <g clip-path="url(#clip0_164_128)">
-                                        <path d="M0 3.5H15M15 3.5L12 0.5M15 3.5L12 6.5" stroke="#000"></path>
-                                        <path d="M0 3.5H15M15 3.5L12 0.5M15 3.5L12 6.5" stroke="#000" stroke-width="1.2"></path>
-                                    </g>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="conditions">
-                <div class="container">
-                    <h3>Условия</h3>
-                    <h2>Что входит в аренду офиса</h2>
-                </div>
-            </section>
-        </main>
-        <footer>
-            <div class="footer__container">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 col-lg-4 footer__content">
-                            <h2>Downtown - трамплин для вашего успеха</h2>
-                            <p>Это текст о компании. Он необходим для дальнейшего продвижения Вашего сайта. Это текст о компании.</p>
-                            <div class="footer__contacts">
-                                <a href="tel:( +123 ) 456 7890" target="_blank" class="footer__contacts__phone">
-                                    <svg
-                                        width="18"
-                                        height="18"
-                                        viewBox="0 0 18 18"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer__container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-4 footer__content">
+                        <h2>Downtown - трамплин для вашего успеха</h2>
+                        <p>Это текст о компании. Он необходим для дальнейшего продвижения Вашего сайта. Это текст о компании.</p>
+                        <div class="footer__contacts">
+                            <a href="tel:( +123 ) 456 7890" target="_blank" class="footer__contacts__phone">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M14.7162 10.5022C13.7366 10.5022 12.7747 10.349 11.8633 10.0478C11.4167 9.89542 10.8676 10.0352 10.595 10.3151L8.796 11.6732C6.70963 10.5595 5.42446 9.27475 4.32596 7.20404L5.64408 5.45188C5.98654 5.10988 6.10938 4.61029 5.96221 4.14154C5.65971 3.22529 5.50604 2.26392 5.50604 1.28392C5.50608 0.575958 4.93013 0 4.22221 0H1.28387C0.575958 0 0 0.575958 0 1.28387C0 9.39846 6.60158 16 14.7162 16C15.4241 16 16 15.424 16 14.7161V11.786C16 11.0781 15.424 10.5022 14.7162 10.5022Z" fill="#C25D49"/>
-                                    </svg>
-                                    ( +123 ) 456 7890
-                                </a>
-                                <a href="mailto:info@downtownastana.com" target="_blank" class="footer__contacts__phone">
-                                    <svg
-                                        width="18"
-                                        height="18"
-                                        viewBox="0 0 18 18"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
+                                    </svg> ( +123 ) 456 7890
+                            </a>
+                            <a href="mailto:info@downtownastana.com" target="_blank" class="footer__contacts__phone">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <g clip-path="url(#clip0_1_441)">
                                             <path d="M11.6633 9.74707L10.1558 11.2597C9.54443 11.8732 8.46879 11.8864 7.84424 11.2597L6.33663 9.74707L0.922009 15.1793C1.12356 15.2725 1.34578 15.3281 1.58203 15.3281H16.418C16.6542 15.3281 16.8764 15.2725 17.0779 15.1793L11.6633 9.74707Z" fill="#C25D49"/>
                                             <path d="M16.418 2.67188H1.58203C1.34578 2.67188 1.12356 2.72749 0.922077 2.82069L6.70799 8.6258C6.70837 8.62618 6.70883 8.62625 6.70922 8.62664C6.7096 8.62703 6.70967 8.62755 6.70967 8.62755L8.59099 10.5151C8.79082 10.7149 9.20925 10.7149 9.40908 10.5151L11.29 8.62787C11.29 8.62787 11.2905 8.62703 11.2909 8.62664C11.2909 8.62664 11.2917 8.62618 11.2921 8.6258L17.0779 2.82066C16.8764 2.72742 16.6542 2.67188 16.418 2.67188Z" fill="#C25D49"/>
                                             <path d="M0.168258 3.55811C0.0639844 3.76897 0 4.00304 0 4.25378V13.746C0 13.9967 0.0639141 14.2308 0.168223 14.4416L5.59223 9.00005L0.168258 3.55811Z" fill="#C25D49"/>
                                             <path d="M17.8317 3.55811L12.4078 9.00012L17.8317 14.4418C17.936 14.2309 18 13.9968 18 13.746V4.25385C18 4.00304 17.936 3.76897 17.8317 3.55811Z" fill="#C25D49"/>
                                         </g>
-                                    </svg>
-                                    info@downtownastana.com
-                                </a>
-                                <a href="https://2gis.kz/astana/firm/70000001095552003/71.465105%2C51.129118?m=71.467988%2C51.130578%2F16.92" target="_blank" class="footer__contacts__phone">
-                                    <svg
-                                        width="18"
-                                        height="18"
-                                        viewBox="0 0 18 18"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
+                                    </svg> info@downtownastana.com
+                            </a>
+                            <a href="https://2gis.kz/astana/firm/70000001095552003/71.465105%2C51.129118?m=71.467988%2C51.130578%2F16.92" target="_blank" class="footer__contacts__phone">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M8 0C5.05925 0 2.66666 2.39259 2.66666 5.33334C2.66666 6.21616 2.88738 7.09147 3.30697 7.86784L7.70834 15.8281C7.76694 15.9342 7.87859 16 8 16C8.12141 16 8.23306 15.9342 8.29166 15.8281L12.6947 7.86522C13.1126 7.09147 13.3333 6.21613 13.3333 5.33331C13.3333 2.39259 10.9408 0 8 0ZM8 8C6.52962 8 5.33334 6.80372 5.33334 5.33334C5.33334 3.86297 6.52962 2.66669 8 2.66669C9.47038 2.66669 10.6667 3.86297 10.6667 5.33334C10.6667 6.80372 9.47038 8 8 8Z" fill="#C25D49"/>
-                                    </svg>
-                                    пр. Р. Кошкарбаева, участок 1/1 г. Нур-Султан, Казахстан
-                                </a>
-                            </div>
-                            <div class="footer__menu">
-                                <a class="footer-menu__item active" href="#">Главная</a>
-                                <a class="footer-menu__item" href="#">О компании</a>
-                                <a class="footer-menu__item" href="#">Объекты</a>
-                                <a class="footer-menu__item" href="#">FAQ</a>
-                                <a class="footer-menu__item" href="#">Отзывы</a>
-                                <a class="footer-menu__item" href="#">Вакансии</a>
-                                <a class="footer-menu__item" href="#">Контакты</a>
-                                <a class="footer-menu__item" href="#">Галерея</a>
-                            </div>
+                                    </svg> пр. Р. Кошкарбаева, участок 1/1 г. Нур-Султан, Казахстан
+                            </a>
                         </div>
-                        <div class="col-12 col-lg-8 footer__map">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3391.4010810044897!2d71.46150757185679!3d51.12888248870514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc8b6a8361e2349cd!2sDowntown%20Business%20Center!5e0!3m2!1sru!2skz!4v1589428873496!5m2!1sru!2skz"
-                                frameborder="no"
-                                style="box-sizing: border-box; border-radius: 20px;"
-                                width="100%"
-                                height="100%"
-                                allowfullscreen=""
-                                aria-hidden="false"
-                                tabindex="0"
-                            ></iframe>
+                        <div class="footer__menu">
+                            <a class="footer-menu__item active" href="#">Главная</a>
+                            <a class="footer-menu__item" href="#">О компании</a>
+                            <a class="footer-menu__item" href="#">Объекты</a>
+                            <a class="footer-menu__item" href="#">FAQ</a>
+                            <a class="footer-menu__item" href="#">Отзывы</a>
+                            <a class="footer-menu__item" href="#">Вакансии</a>
+                            <a class="footer-menu__item" href="#">Контакты</a>
+                            <a class="footer-menu__item" href="#">Галерея</a>
                         </div>
+                    </div>
+                    <div class="col-12 col-lg-8 footer__map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3391.4010810044897!2d71.46150757185679!3d51.12888248870514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc8b6a8361e2349cd!2sDowntown%20Business%20Center!5e0!3m2!1sru!2skz!4v1589428873496!5m2!1sru!2skz"
+                            frameborder="no" style="box-sizing: border-box; border-radius: 20px;" width="100%" height="100%" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                     </div>
                 </div>
             </div>
-            <div class="developers__container">
-                <div class="container developers">
-                    <a href="#" class="m-0">designer - Zamira Zholdassova</a>
-                    <a href="https://kairbekov-official.netlify.app/" target="_blank" class="m-0">developer - Zhanat Kairbekov</a>
-                </div>
+        </div>
+        <div class="developers__container">
+            <div class="container developers">
+                <a href="#" class="m-0">designer - Zamira Zholdassova</a>
+                <a href="https://kairbekov-official.netlify.app/" target="_blank" class="m-0">developer - Zhanat Kairbekov</a>
             </div>
-        </footer>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-        <script src="owlcarousel/owl.carousel.min.js"></script>
-        <script src="js/general.js"></script>
-        <script src="js/script.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    </body>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="owlcarousel/owl.carousel.min.js"></script>
+    <script src="js/general.js"></script>
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+
 </html>
