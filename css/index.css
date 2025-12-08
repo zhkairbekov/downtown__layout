@@ -1154,6 +1154,7 @@
     text-align             : center;
     color                  : #FFFFFF;
     text-decoration        : none;
+    z-index                : 999;
 }
 
 .contacts_cards__right_side__text {
