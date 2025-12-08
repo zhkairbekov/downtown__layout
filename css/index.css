@@ -1120,3 +1120,70 @@
     margin    : 0;
     border-top: 1px solid #C0C2D7;
 }
+
+
+/* 
+ ---------------------------------
+ --------- contacts_cards --------
+ ---------------------------------
+ */
+
+.contacts_cards .container .row {
+    row-gap: 24px;
+
+    .contacts_cards__left_side,
+    .contacts_cards__right_side {
+        border-radius: 20px;
+        overflow     : hidden;
+    }
+}
+
+.contacts_cards__text {
+    bottom                 : 0;
+    left                   : 0;
+    background             : #C25D49;
+    border-top-right-radius: 20px;
+    padding                : 18px 20px 18px 50px;
+    display                : flex;
+    gap                    : 20px;
+    align-items            : center;
+    font-family            : 'Montserrat';
+    font-weight            : 700;
+    font-size              : 18px;
+    line-height            : 100%;
+    text-align             : center;
+    color                  : #FFFFFF;
+    text-decoration        : none;
+}
+
+.contacts_cards__right_side__text {
+    z-index       : 1;
+    padding       : 80px 75px 130px 65px;
+    gap           : 24px;
+    display       : flex;
+    flex-direction: column;
+
+    h3 {
+        color        : #fff;
+        margin-bottom: 0;
+        font-family  : Montserrat;
+        font-weight  : 500;
+        font-size    : 32px;
+        line-height  : 36px;
+    }
+
+    p {
+        color        : #fff;
+        font-family  : Montserrat;
+        font-weight  : 500;
+        font-size    : 18px;
+        line-height  : 100%;
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 992px) {
+    .contacts_cards__text {
+        padding: 18px 20px 18px 20px;
+    }
+}
