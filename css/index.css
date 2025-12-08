@@ -850,11 +850,6 @@
     margin-bottom: 0;
 }
 
-
-/* =========================
-   Список карточек
-   ========================= */
-
 .conditions__cards-list {
     padding         : 64px 52px;
     background-color: #6D6462;
@@ -864,44 +859,21 @@
     margin-top      : 70px;
 }
 
-
-/* контейнер карточки (колонка) */
-
-.conditions__cards-item {
-    /* можно добавить отступы если нужно */
-}
-
-
-/* внешний контейнер контента карточки (тот, который у тебя был) */
-
 .conditions__cards-item__content {
     overflow     : hidden;
     height       : 100%;
     border-radius: 20px;
     position     : relative;
-    /* background теперь управляется лицевой/задней стороной флип-карты */
 }
-
-
-/* если у тебя был overlay span — он теперь на фронте */
 
 .flip-card__front span,
 .conditions__cards-item__content>span {
-    /* на случай если span остался вне .flip-card */
     position      : absolute;
     inset         : 0;
     background    : rgba(0, 0, 0, 0.2);
     z-index       : 2;
     pointer-events: none;
 }
-
-
-/* =========================
-   Flip-card: базовая сетка
-   ========================= */
-
-
-/* контейнер с перспективой */
 
 .flip-card {
     width      : 100%;
@@ -910,9 +882,6 @@
     cursor     : pointer;
     outline    : none;
 }
-
-
-/* вращающаяся внутренность */
 
 .flip-card__inner {
     position               : relative;
@@ -925,15 +894,9 @@
     will-change            : transform;
 }
 
-
-/* когда карточка "перевернута" */
-
 .flip-card.is-flipped .flip-card__inner {
     transform: rotateY(180deg);
 }
-
-
-/* сторона карточки: общие настройки */
 
 .flip-card__face {
     position                   : absolute;
@@ -945,18 +908,11 @@
     display                    : block;
 }
 
-
-/* ========== FRONT ========== */
-
 .flip-card__front {
     z-index   : 1;
     background: #C25D49;
-    /* запасной фон, если изображение не загрузится */
     position  : relative;
 }
-
-
-/* Заголовок на фронте (сохранил твои стили, но локализовал) */
 
 .flip-card__front .conditions__cards-item__title {
     position     : absolute;
@@ -973,9 +929,6 @@
     line-height  : 40px;
 }
 
-
-/* картинка фронта — заполняет лицо, без искажений */
-
 .flip-card__front img {
     position  : absolute;
     inset     : 0;
@@ -986,15 +939,9 @@
     z-index   : 1;
 }
 
-
-/* если в HTML есть span как overlay внутри фронта — он выше картинки, но ниже заголовка */
-
 .flip-card__front span {
     z-index: 2;
 }
-
-
-/* ========== BACK ========== */
 
 .flip-card__back {
     transform      : rotateY(180deg);
@@ -1002,22 +949,15 @@
     align-items    : center;
     justify-content: center;
     background     : #C25D49;
-    /* ЗАДНИЙ ФОН как просили */
     color          : #fff;
     padding        : 24px;
     box-sizing     : border-box;
     z-index        : 0;
 }
 
-
-/* внутренний контейнер на обратной стороне (для управления отступами) */
-
 .flip-card__back-inner {
     width: 100%;
 }
-
-
-/* заголовок на обратной стороне (делаем позицию обычной) */
 
 .flip-card__back .conditions__cards-item__title {
     position      : absolute;
@@ -1037,9 +977,6 @@
     gap           : 12px;
 }
 
-
-/* .flip_side — текст на обратной стороне; фон по требованию */
-
 .flip-card__back .flip_side {
     margin     : 0;
     color      : #fff;
@@ -1055,13 +992,7 @@
     opacity    : 0.75;
 }
 
-
-/* =========================
-   Overlay / визуальная сост.
-   ========================= */
-
 .conditions__cards-item__content span {
-    /* если span остался вне .flip-card, это запасной overlay */
     position      : absolute;
     inset         : 0;
     background    : rgba(0, 0, 0, 0.2);
@@ -1069,22 +1000,11 @@
     pointer-events: none;
 }
 
-
-/* =========================
-   Адаптивность / поведение
-   ========================= */
-
-
-/* Hover-переворот для устройств с hover (десктоп) */
-
 @media (hover: hover) and (pointer: fine) {
     .flip-card:hover .flip-card__inner {
         transform: rotateY(180deg);
     }
 }
-
-
-/* Уменьшаем интенсивность анимации на слабых устройствах */
 
 @media (prefers-reduced-motion: reduce) {
 
@@ -1094,17 +1014,6 @@
     }
 }
 
-
-/* Если нужна фиксированная высота карточки — можно задать, например:
-   .conditions__cards-item__content { min-height: 320px; } 
-   или управлять размером с помощью сетки col-*-* у тебя в проекте.
-*/
-
-
-/* =========================
-   Небольшие мелочи и сбросы
-   ========================= */
-
 .flip-card,
 .flip-card__inner,
 .flip-card__face {
@@ -1112,9 +1021,6 @@
     -webkit-transform-style    : preserve-3d;
     height                     : 100%;
 }
-
-
-/* Обеспечим, чтобы внутренний span/overlay не перекрывал интерактивность на задней стороне */
 
 .flip-card__back span {
     display: none;
