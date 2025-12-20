@@ -1,5 +1,5 @@
 $('.partners-carousel__slider').owlCarousel({
-    items: 6,
+    items: 5.5,
     margin: 121,
     loop: true,
     autoplay: true,
@@ -27,6 +27,32 @@ $('.partners-carousel__slider').owlCarousel({
         },
         991: {
             items: 6,
+        },
+    },
+});
+
+$('.reviews__slider').owlCarousel({
+    center: true,
+    loop: false,
+    dots: false,
+    nav: true,
+    navText: [
+        '<span class="custom-prev"><img src="img/icons/arrow-left.png" alt="prev"></span>',
+        '<span class="custom-next"><img src="img/icons/arrow-right.png" alt="next"></span>'
+    ],
+    mouseDrag: true,
+    touchDrag: true,
+    responsive: {
+        0: {
+            items: 1,
+        },
+        600: {
+            items: 1.4,
+            margin: 20,
+        },
+        992: {
+            items: 2.4,
+            margin: 20,
         },
     },
 });
@@ -275,3 +301,79 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+
+const slides = Array.from(document.querySelectorAll('.slide'));
+const buttons = document.querySelectorAll('.gallery__btn');
+let activeIndex = 0;
+
+function updateSlides() {
+    slides.forEach((slide, index) => {
+        slide.classList.remove('is-active', 'is-prev', 'is-next', 'is-next-2', 'is-next-3');
+
+        // Вычисляем разницу с учетом зацикливания
+        let diff = index - activeIndex;
+
+        // Обрабатываем зацикливание
+        if (diff > slides.length / 2) {
+            diff -= slides.length;
+        } else if (diff < -slides.length / 2) {
+            diff += slides.length;
+        }
+
+        if (diff === 0) {
+            slide.classList.add('is-active');
+        } else if (diff === -1) {
+            slide.classList.add('is-prev');
+        } else if (diff === 1) {
+            slide.classList.add('is-next');
+        } else if (diff === 2) {
+            slide.classList.add('is-next-2');
+        } else if (diff === 3 || diff === -3) {
+            slide.classList.add('is-next-3');
+        }
+    });
+}
+
+buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        const dir = btn.dataset.dir;
+
+        if (dir === 'next') {
+            activeIndex = (activeIndex + 1) % slides.length;
+        } else if (dir === 'prev') {
+            activeIndex = (activeIndex - 1 + slides.length) % slides.length;
+        }
+
+        updateSlides();
+    });
+});
+
+// Инициализация
+updateSlides();
+
+// Поддержка свайпов на мобильных
+let touchStartX = 0;
+let touchEndX = 0;
+
+const track = document.querySelector('.gallery__track');
+
+track.addEventListener('touchstart', e => {
+    touchStartX = e.changedTouches[0].screenX;
+});
+
+track.addEventListener('touchend', e => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+});
+
+function handleSwipe() {
+    if (touchEndX < touchStartX - 50) {
+        activeIndex = (activeIndex + 1) % slides.length;
+        updateSlides();
+    }
+    if (touchEndX > touchStartX + 50) {
+        activeIndex = (activeIndex - 1 + slides.length) % slides.length;
+        updateSlides();
+    }
+}

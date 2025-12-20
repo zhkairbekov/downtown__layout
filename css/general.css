@@ -421,6 +421,13 @@ footer .footer__container {
     color: #C25D49;
 }
 
+.footer__map {
+    border-radius: 20px;
+    height: 100%;
+    overflow: hidden;
+    min-height: 350px;
+}
+
 footer .developers__container {
     padding-bottom  : 16px;
     margin-top      : 8px;
